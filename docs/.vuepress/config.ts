@@ -5,11 +5,10 @@ import { defineUserConfig } from "vuepress";
 import { gungnirTheme, i18n } from "vuepress-theme-gungnir";
 import { navbar, sidebar } from "./configs";
 
-const isProd = process.env.NODE_ENV === "production";
+// const isProd = process.env.NODE_ENV === "production";
 
 export default defineUserConfig({
   base: "/",
-
   head: [
     [
       "link",
@@ -66,21 +65,22 @@ export default defineUserConfig({
   theme: gungnirTheme({
     repo: "Renovamen/vuepress-theme-gungnir",
     docsDir: "docs",
+    navbarTitle: "Align",
 
     hitokoto: "https://v1.hitokoto.cn?c=i", // enable hitokoto (一言) or not?
 
     // personal information
     personalInfo: {
-      name: "Gungnir",
-      avatar: "/img/avatar.jpeg",
-      description: "A blog theme for VuePress",
+      name: "Align",
+      avatar: "/img/avatar.jpg",
+      description: "二月爱凌, 梦亦同趋, Align...",
       sns: {
-        github: "Renovamen",
-        linkedin: "xiaohan-zou-55bba0160",
-        facebook: "renovamen.zou",
-        twitter: "renovamen_zxh",
-        zhihu: "chao-neng-gui-su",
-        email: "renovamenzxh@gmail.com",
+        github: "/",
+        linkedin: "/",
+        facebook: "/",
+        twitter: "/",
+        zhihu: "/",
+        email: "1739174050@qq.com",
         rss: "/rss.xml",
         // customized sns
         bilibili: {
@@ -156,34 +156,34 @@ export default defineUserConfig({
       }
     },
 
-    themePlugins: {
-      // only enable git plugin in production mode
-      git: isProd,
-      katex: true,
-      mermaid: true,
-      chartjs: true,
-      giscus: {
-        repo: "This-is-an-Apple/gitalk-comments",
-        repoId: "MDEwOlJlcG9zaXRvcnkyMTA1MjQyMTQ=",
-        category: "Announcements",
-        categoryId: "DIC_kwDODIxYNs4CAO1u",
-        lazyLoad: true
-      },
-      mdPlus: {
-        all: true
-      },
-      ga: "G-EE8M2S3MPB",
-      ba: "10b7bc420625758a319d6b23aed4700f",
-      rss: {
-        siteURL: "https://v2.vuepress-theme-gungnir.vercel.app",
-        copyright: "Renovamen 2018-2022"
-      },
-      pwa: true,
-      search: false // use @vuepress/plugin-docsearch instead
-    },
+    // themePlugins: {
+    //   // only enable git plugin in production mode
+    //   git: isProd,
+    //   katex: true,
+    //   mermaid: true,
+    //   chartjs: true,
+    //   giscus: {
+    //     repo: "This-is-an-Apple/gitalk-comments",
+    //     repoId: "MDEwOlJlcG9zaXRvcnkyMTA1MjQyMTQ=",
+    //     category: "Announcements",
+    //     categoryId: "DIC_kwDODIxYNs4CAO1u",
+    //     lazyLoad: true
+    //   },
+    //   mdPlus: {
+    //     all: true
+    //   },
+    //   ga: "G-EE8M2S3MPB",
+    //   ba: "10b7bc420625758a319d6b23aed4700f",
+    //   rss: {
+    //     siteURL: "https://v2.vuepress-theme-gungnir.vercel.app",
+    //     copyright: "Renovamen 2018-2022"
+    //   },
+    //   pwa: true,
+    //   search: false // use @vuepress/plugin-docsearch instead
+    // },
 
     footer: `
-      &copy; <a href="https://github.com/Renovamen" target="_blank">Renovamen</a> 2018-2022
+      &copy; <a href="https://github.com/Renovamen" target="_blank">Align</a> 2018-2022
       <br>
       Powered by <a href="https://v2.vuepress.vuejs.org" target="_blank">VuePress</a> &
       <a href="https://github.com/Renovamen/vuepress-theme-gungnir" target="_blank">Gungnir</a>
