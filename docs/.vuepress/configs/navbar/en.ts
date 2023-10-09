@@ -19,11 +19,11 @@ export const en: NavbarConfig = [
   },
   {
     text: "Posts",
-    link: "/posts/intro.md",
+    link: "/posts/readme.md",
     icon: "ri-article-line"
   },
   {
-    text: "SiteDocs",
+    text: "DevDocs",
     link: "/docs/basic/intro.md",
     icon: "ri-book-2-fill"
   },

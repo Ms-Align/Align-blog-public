@@ -46,5 +46,15 @@ export const en: SidebarConfig = {
         "/docs/plugins/rss.md"
       ]
     }
+  ],
+  "/posts/": [
+    {
+      text: "Intro",
+      children: ["/posts/readme.md"]
+    },
+    {
+      text: "Documents",
+      children: ["/posts/documents/readme.md"]
+    }
   ]
 };

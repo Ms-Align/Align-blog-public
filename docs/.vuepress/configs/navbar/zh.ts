@@ -19,11 +19,11 @@ export const zh: NavbarConfig = [
   },
   {
     text: "文章",
-    link: "/posts/intro.md",
+    link: "/zh/posts/readme.md",
     icon: "ri-article-line"
   },
   {
-    text: "站点文档",
+    text: "开发文档",
     link: "/zh/docs/basic/intro.md",
     icon: "ri-book-2-fill"
   },

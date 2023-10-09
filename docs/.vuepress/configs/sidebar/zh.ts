@@ -53,5 +53,15 @@ export const zh: SidebarConfig = {
         "/zh/docs/plugins/rss.md"
       ]
     }
+  ],
+  "/zh/posts/": [
+    {
+      text: "前言",
+      children: ["/zh/posts/readme.md"]
+    },
+    {
+      text: "文档",
+      children: ["/zh/posts/documents/readme.md"]
+    }
   ]
 };
