@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-611ed3a8","path":"/docs/advanced/hitokoto.html","title":"Hitokoto","lang":"en-US","frontmatter":{"title":"Hitokoto","date":"2021-03-26T00:00:00.000Z"},"excerpt":"","headers":[],"git":{"updatedTime":1653008336000},"readingTime":{"minutes":1,"words":68},"filePathRelative":"docs/advanced/hitokoto.md"}');export{t as data};

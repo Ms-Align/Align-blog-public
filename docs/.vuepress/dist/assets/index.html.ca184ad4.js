@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-042751f2","path":"/posts/documents/MUI%20System/","title":"\u76EE\u5F55","lang":"en-US","frontmatter":{"icon":"repo","article":"Align","title":"\u76EE\u5F55"},"excerpt":"","headers":[],"git":{"updatedTime":1696929214000},"readingTime":{"minutes":1,"words":19},"filePathRelative":"posts/documents/MUI System/README.md"}');export{e as data};

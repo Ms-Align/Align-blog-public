@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-4c51cddf","path":"/zh/posts/documents/yjs.js/","title":"\u76EE\u5F55","lang":"zh-CN","frontmatter":{"icon":"repo","article":"Align","title":"\u76EE\u5F55"},"excerpt":"","headers":[],"git":{"updatedTime":1696929214000},"readingTime":{"minutes":1,"words":80},"filePathRelative":"zh/posts/documents/yjs.js/README.md"}');export{e as data};
