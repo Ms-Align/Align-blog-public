@@ -10,7 +10,7 @@
     "dev:copy": "pnpm build:copy --watch",
     "docs:build": "pnpm --filter=docs docs:build",
     "docs:clean": "pnpm --filter=docs docs:clean",
-    "docs:dev": "pnpm --filter=docs docs:dev",
+    "docs:dev": "pnpm --filter=docs pnpm install docs:dev",
     "docs:release": "pnpm build && pnpm docs:build",
     "docs:serve": "pnpm --filter=docs docs:serve",
     "lint": "eslint --ext .js,.ts,.vue .",
