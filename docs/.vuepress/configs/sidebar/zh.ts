@@ -60,8 +60,38 @@ export const zh: SidebarConfig = {
       children: ["/zh/posts/readme.md"]
     },
     {
-      text: "文档",
-      children: ["/zh/posts/documents/readme.md"]
+      text: "yjs.js",
+      children: [
+        "/zh/posts/documents/yjs.js/基础概念.md",
+        "/zh/posts/documents/yjs.js/网络同步.md",
+        "/zh/posts/documents/yjs.js/Y.Doc.md",
+        "/zh/posts/documents/yjs.js/Shared Types.md",
+        "/zh/posts/documents/yjs.js/Delta Format.md",
+        "/zh/posts/documents/yjs.js/Y.Event.md",
+        "/zh/posts/documents/yjs.js/Y.UndoManager.md",
+        "/zh/posts/documents/yjs.js/Document Updates.md",
+        "/zh/posts/documents/yjs.js/y-protocol源码学习.md",
+        "/zh/posts/documents/yjs.js/y-websocket源码学习.md"
+      ]
+    },
+    {
+      text: "react-dnd",
+      children: [
+        "/zh/posts/documents/reactDnd/介绍.md",
+        "/zh/posts/documents/reactDnd/概览.md",
+        "/zh/posts/documents/reactDnd/组件.md",
+        "/zh/posts/documents/reactDnd/hooks.md",
+        "/zh/posts/documents/reactDnd/Monitoring State.md",
+        "/zh/posts/documents/reactDnd/backend.md"
+      ]
+    },
+    {
+      text: "MUI Systom",
+      children: [
+        "/zh/posts/documents/MUI System/起步.md",
+        "/zh/posts/documents/MUI System/用法.md",
+        "/zh/posts/documents/MUI System/The sx prop.md"
+      ]
     }
   ]
 };

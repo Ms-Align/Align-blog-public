@@ -2,7 +2,7 @@ import type { GungnirThemeI18n } from "../../shared";
 
 const zh: GungnirThemeI18n = {
   // navbar
-  navbarTitle: "$ cd /home/",
+  navbarTitle: "Align",
 
   // language selector
   selectLanguageName: "简体中文",

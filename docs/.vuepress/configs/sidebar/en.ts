@@ -53,8 +53,38 @@ export const en: SidebarConfig = {
       children: ["/posts/readme.md"]
     },
     {
-      text: "Documents",
-      children: ["/posts/documents/readme.md"]
+      text: "yjs.js",
+      children: [
+        "/posts/documents/yjs.js/基础概念.md",
+        "/posts/documents/yjs.js/网络同步.md",
+        "/posts/documents/yjs.js/Y.Doc.md",
+        "/posts/documents/yjs.js/Shared Types.md",
+        "/posts/documents/yjs.js/Delta Format.md",
+        "/posts/documents/yjs.js/Y.Event.md",
+        "/posts/documents/yjs.js/Y.UndoManager.md",
+        "/posts/documents/yjs.js/Document Updates.md",
+        "/posts/documents/yjs.js/y-protocol源码学习.md",
+        "/posts/documents/yjs.js/y-websocket源码学习.md"
+      ]
+    },
+    {
+      text: "react-dnd",
+      children: [
+        "/posts/documents/reactDnd/介绍.md",
+        "/posts/documents/reactDnd/概览.md",
+        "/posts/documents/reactDnd/组件.md",
+        "/posts/documents/reactDnd/hooks.md",
+        "/posts/documents/reactDnd/Monitoring State.md",
+        "/posts/documents/reactDnd/backend.md"
+      ]
+    },
+    {
+      text: "MUI Systom",
+      children: [
+        "/posts/documents/MUI System/起步.md",
+        "/posts/documents/MUI System/用法.md",
+        "/posts/documents/MUI System/The sx prop.md"
+      ]
     }
   ]
 };

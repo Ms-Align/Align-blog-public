@@ -1,6 +1,6 @@
 {
-  "name": "Gungnir Theme",
-  "short_name": "Gungnir",
+  "name": "Align",
+  "short_name": "Align",
   "description": "A blog theme for VuePress.",
   "start_url": "/index.html",
   "display": "standalone",

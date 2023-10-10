@@ -120,8 +120,7 @@ export default defineUserConfig({
         }
       },
       links: {
-        subtitle:
-          "When you are looking at the stars, please put the brightest star shining night sky as my soul.",
+        subtitle: "开源项目，文章导航，通过以下连接快速前往",
         bgImage: {
           path: "/img/pages/links.jpg",
           mask: "rgba(64, 118, 190, 0.5)"
