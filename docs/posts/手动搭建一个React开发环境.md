@@ -343,28 +343,7 @@ declare module "*.webp";
 
 一般情况下，我们更推荐使用css module的模式来导入样式，这样可以很好的定义样式作用域。
 
-现在让我开启css module模式。
-
-```js
-rules: [
-      // all files with a `.ts`, `.cts`, `.mts` or `.tsx` extension will be handled by `ts-loader`
-      { test: /\.([cm]?ts|tsx)$/, loader: "ts-loader" },
-      {
-        test: /\.css$/i,
-        use: [{
-          loader: "style-loader",
-        },
-        {
-          loader: "css-loader",
-          options: {
-            modules: {
-              namedExport: true,
-            },
-          },
-        }],
-      },
-    ],
-```
+使用css-loader默认会开启css module模式，我们无需额外的配置。loader默认会把文件名符合`/\.module\.\w+$/i.test(filename)` 与 `/\.icss\.\w+$/i.test(filename)`的文件识别为css module文件进行处理。
 
 现在在src文件夹中创建一个index.nodule.css并声明样式:
 
@@ -755,3 +734,147 @@ devServer: {
 
 
 ## 代码格式化
+
+约束代码和提交风格，哪怕是个人开发项目我也愿意配置代码约束。
+
+### 安装Eslint
+
+运行`npm init @eslint/config`指令初始化eslint。
+
+```shell
+# 你准备用eslint做什么
+√ How would you like to use ESLint? · style
+# 项目使用了那种模块化方案
+√ What type of modules does your project use? · esm
+# 项目使用的框架
+√ Which framework does your project use? · react
+# 项目是否使用了react
+√ Does your project use TypeScript? · No / Yes
+# 你的项目运行在浏览器还是node
+√ Where does your code run? · browser
+# 使用现有流行的代码风格还是自己自定义一套(这里我们选择自定义)
+√ How would you like to define a style for your project? · prompt
+# 你希望创建那种格式的eslint配置文件
+√ What format do you want your config file to be in? · JavaScript
+# 缩进使用几个空格
+√ What style of indentation do you use? · 4
+# 字符串使用单引号还是双引号
+√ What quotes do you use for strings? · double
+# 使用那种系统的换行符
+√ What line endings do you use? · windows
+# 每行结尾是否使用分号
+√ Do you require semicolons? · No / Yes
+```
+配置完成后你会发现项目红了,因为我们的代码不符合我们刚刚配置的规范，按照eslint的提示修改代码格式即可。
+
+#### Component definition is missing display name
+
+eslint会提示我们的组件有这个问题(让我们给组件配置名称方便debugger)，这里我们不打算给组件配置名字，所以我们关掉这条规则即可。
+
+```js
+"react/display-name":"off"
+```
+
+::: info
+
+规则的开启和关闭可查阅eslint的官网了解，或者点击编辑器中eslint错误弹窗中的规则地址前往对应文档
+
+:::
+
+我们的webpack.config.js也会被eslint检测，让我们创建.eslintignore忽略那些不需要检测的文件。
+
+### 安装prettier
+
+```shell
+npm install -D prettier eslint-plugin-prettier eslint-config-prettier
+```
+
+prettier和eslint都可以检测代码格式，为了让二者不会冲突我们需要安装对应的插件使二者能相互配合。
+* eslint-config-prettier 的作用是关闭eslint中与prettier相互冲突的规则。
+* eslint-plugin-prettier 的作用是赋予eslint用prettier格式化代码的能力
+
+修改eslint文件，让eslint采用prettier的风格:
+
+```js
+module.exports = {
+  env: {
+    browser: true,
+
+    es2021: true,
+  },
+
+  extends: [
+    "eslint:recommended",
+
+    "plugin:@typescript-eslint/recommended",
+
+    "plugin:react/recommended",
+  ],
+
+  overrides: [
+    {
+      env: {
+        node: true,
+      },
+
+      files: [".eslintrc.{js,cjs}"],
+
+      parserOptions: {
+        sourceType: "script",
+      },
+    },
+  ],
+
+  parser: "@typescript-eslint/parser",
+
+  parserOptions: {
+    ecmaVersion: "latest",
+
+    sourceType: "module",
+  },
+
+  plugins: ["@typescript-eslint", "react", "prettier"],
+
+  rules: {
+    //"linebreak-style": ["error", "windows"],
+
+    "prettier/prettier": "error",
+
+    "react/display-name": "off",
+  },
+};
+```
+
+创建.prettierrc配置文件，我们可以参照prettier官网定义自己想要的代码格式化方案。
+
+::: info
+
+我们让eslint专门进行语法检测，prettier专门进行代码风格格式化。所以我们配置eslint使用prettier插件，让eslint优先采取prettier的代码风格规范。
+
+:::
+
+::: warning
+
+eslint和prettier我研究的不算多，后面专门开个栏目研究下。
+
+:::
+
+### husky和lint-staged
+
+通过配置这两个库帮助我们在git提交前检查代码规范，未通过检查的代码将强制无法提交。
+
+### todo
+
+## Css In Js
+
+个人感觉cij很方便，这里我们使用mui作为我们的cij方案。
+
+### 安装Mui
+
+安装请参照本站的的Mui system文档，因为是我自己翻译的可能会有错误所以原文也一并搬过来了。
+
+### 使用主题
+
+参照本站的mui system主题文档可了解如何在项目中配置使用主题。我个人现在是比较推荐使用主题的，整站切换风格会很方便。
+
+
