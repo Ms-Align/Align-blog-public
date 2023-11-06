@@ -21,7 +21,7 @@ tags:
 * 框架
   * react
 * 代码格式化及校验工具
-  * prettier，eslint和husky
+  * prettier，eslint, lint-staged和husky
 * 打包器
   * webpack
 * css in js工具
@@ -591,7 +591,7 @@ npm install sass-loader sass --save-dev
 
 我们一般也会import一些图片或其他静态资源，让我们配置webpack使用loader来处理这些静态资源。
 
-webpack5已经默认内置了这个功能，所以我们直接开启他。在rules中增加如下配置:
+webpack5已经默认内置了这个功能，所以我们直接开启它。在rules中增加如下配置:
 
 ```js
 {
@@ -862,6 +862,94 @@ eslint和prettier我研究的不算多，后面专门开个栏目研究下。
 ### husky和lint-staged
 
 通过配置这两个库帮助我们在git提交前检查代码规范，未通过检查的代码将强制无法提交。
+
+git提供了一些关键时刻执行用户行为的hook，这也是husky实现的基础，这里我们主要使用commit-msg和pre-commit两个钩子。
+
+#### husky
+
+husky提供了快捷脚本来一键安装并配置:
+
+```shell
+npx husky-init && npm install
+
+```
+
+不过我们这里不使用这个脚本，我们按常规方式安装并了解上边的脚本做了些什么。
+
+##### install(husky.v8)
+
+```shell
+npm install husky --save-dev
+```
+
+##### 安装husky的依赖
+```shell
+npx husky install
+```
+执行成功后项目根目录将会出现.husky/文件夹。
+
+husky必须要执行上述脚本安装依赖后才能运行,如果其他用户拉取了我们的项目忘记执行该脚本那么husky将无法生效，所以一般会在package.json中增加对应的脚本(prepare)，在项目启动前执行该prepare脚本。
+
+```json
+{
+  "scripts": {
+    "prepare": "husky install" 
+  }
+}
+```
+##### 配置钩子
+
+```shell
+npx husky add .husky/pre-commit "npm test"
+git add .husky/pre-commit
+```
+
+上述指令帮我们创建了一个pre-commit钩子，这个钩子会在git commit之前触发。这个指令的本质是在.husky/下创建对应hook名的脚本文件，该脚本会帮我们执行npm test指令。
+如果npm test指令执行失败，commit将会中断。
+
+同理我们添加一个commit-msg钩子，来检测用户提交的描述是否规范。
+
+```shell
+npx husky add .husky/commit-msg "your command"
+git add .husky/commit-msg
+```
+
+##### 卸载husky
+
+```shell
+npm uninstall husky && git config --unset core.hooksPath
+```
+
+#### lint-staged
+
+我们使用husky在代码commit之前检测用户代码是否符合prettier和eslint的要求，目前有个问题是这个检测会对项目中的所有文件生效，所以随着项目越来越大检测时间会变得越来越长。实际上我们只需要检测用户提交的暂存代码，这里我们使用lint-staged来让检测只发生在暂存区的代码上。
+
+##### 安装
+
+```shell
+npm install --save-dev lint-staged # requires further setup
+```
+
+##### 配置
+
+lint-staged有许多配置方法，我们这里直接在package.json中配置。以下是官网的一个示例:
+
+```json
+{
+  "lint-staged": {
+    "*": "your-cmd"
+  }
+}
+```
+
+配置为键值对的形式，键为匹配的文件，值则是对应执行的脚本。
+所以我们可以配置如下配置来让prettier帮我们格式化文件:
+```json
+"lint-staged": {
+    "*.{js,ts,tsx,jsx}": "prettier --write"
+  },
+```
+上述配置中我们匹配暂存区下的所有`"*.{js,ts,tsx,jsx}"`文件并用eslint检测,对所有`*.{json,yml,css,scss}`文件我们使用prettier。
 
 ### todo
 
