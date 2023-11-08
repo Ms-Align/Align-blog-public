@@ -10,6 +10,8 @@ export const createPages = async (
    * Create page for pagination manully to avoid the issues caused by
    * dynamic routes, see https://github.com/Renovamen/vuepress-theme-gungnir/issues/28.
    */
+
+  //分页
   const blogNum = app.pages.filter(
     (page) => page.frontmatter.layout === "Post"
   ).length;

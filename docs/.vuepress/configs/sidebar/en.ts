@@ -9,8 +9,8 @@ export const en: SidebarConfig = {
         "/docs/basic/installation.md",
         "/docs/basic/config.md",
         "/docs/basic/search.md",
-        "/docs/basic/content.md"
-      ]
+        "/docs/basic/content.md",
+      ],
     },
     {
       text: "Advanced",
@@ -20,8 +20,8 @@ export const en: SidebarConfig = {
         "/docs/advanced/reading-time.md",
         "/docs/advanced/rss.md",
         "/docs/advanced/hitokoto.md",
-        "/docs/advanced/icons.md"
-      ]
+        "/docs/advanced/icons.md",
+      ],
     },
     {
       text: "Markdown Enhancements",
@@ -29,8 +29,8 @@ export const en: SidebarConfig = {
         "/docs/md-enhance/math.md",
         "/docs/md-enhance/chart.md",
         "/docs/md-enhance/mermaid.md",
-        "/docs/md-enhance/others.md"
-      ]
+        "/docs/md-enhance/others.md",
+      ],
     },
     {
       text: "Plugins",
@@ -43,14 +43,14 @@ export const en: SidebarConfig = {
         "/docs/plugins/reading-time.md",
         "/docs/plugins/baidu-tongji.md",
         "/docs/plugins/md-plus.md",
-        "/docs/plugins/rss.md"
-      ]
-    }
+        "/docs/plugins/rss.md",
+      ],
+    },
   ],
   "/posts/": [
     {
       text: "Intro",
-      children: ["/posts/readme.md"]
+      children: ["/posts/readme.md"],
     },
     {
       text: "yjs.js",
@@ -64,8 +64,8 @@ export const en: SidebarConfig = {
         "/posts/documents/yjs.js/Y.UndoManager.md",
         "/posts/documents/yjs.js/Document Updates.md",
         "/posts/documents/yjs.js/y-protocol源码学习.md",
-        "/posts/documents/yjs.js/y-websocket源码学习.md"
-      ]
+        "/posts/documents/yjs.js/y-websocket源码学习.md",
+      ],
     },
     {
       text: "react-dnd",
@@ -75,16 +75,16 @@ export const en: SidebarConfig = {
         "/posts/documents/reactDnd/组件.md",
         "/posts/documents/reactDnd/hooks.md",
         "/posts/documents/reactDnd/Monitoring State.md",
-        "/posts/documents/reactDnd/backend.md"
-      ]
+        "/posts/documents/reactDnd/backend.md",
+      ],
     },
     {
       text: "MUI Systom",
       children: [
         "/posts/documents/MUI System/起步.md",
         "/posts/documents/MUI System/用法.md",
-        "/posts/documents/MUI System/The sx prop.md"
-      ]
-    }
-  ]
+        "/posts/documents/MUI System/The sx prop.md",
+      ],
+    },
+  ],
 };

@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-e9c2e3d2","path":"/tags/%E5%89%8D%E7%AB%AF/","title":"\u524D\u7AEF | Tags","lang":"en-US","frontmatter":{"title":"\u524D\u7AEF | Tags","layout":"Tags","blog":{"type":"category","name":"\u524D\u7AEF","key":"tag"}},"excerpt":"","headers":[],"git":{},"filePathRelative":null}');export{e as data};

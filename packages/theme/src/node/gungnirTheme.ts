@@ -20,7 +20,7 @@ export interface GungnirThemeOptions extends GungnirThemeLocaleOptions {
 export const gungnirTheme =
   ({ themePlugins = {}, ...localeOptions }: GungnirThemeOptions = {}): Theme =>
   (app) => {
-    assignDefaultLocaleOptions(localeOptions);
+    assignDefaultLocaleOptions(localeOptions);//合并一些默认的配置
 
     localeOptions.search = !(themePlugins.search === false);
 
@@ -37,20 +37,20 @@ export const gungnirTheme =
       // use alias to make all components replaceable
       alias: Object.fromEntries(
         fs
-          .readdirSync(path.resolve(__dirname, "../client/components"))
-          .filter((file) => file.endsWith(".vue"))
+          .readdirSync(path.resolve(__dirname, "../client/components"))//获取对应目录下所有目录名
+          .filter((file) => file.endsWith(".vue"))//过滤出所有vue文件
           .map((file) => [
             `@theme/${file}`,
             path.resolve(__dirname, "../client/components", file)
-          ])
+          ])//为所有vue组件文件路径拼接上目录别名
       ),
 
-      clientConfigFile: path.resolve(__dirname, "../client/config.js"),
+      clientConfigFile: path.resolve(__dirname, "../client/config.js"),//获取客户端配置文件路径
 
       extendsBundlerOptions: (config: any, app): void => {
         const { bundler } = app.options;
 
-        if (bundler.name.endsWith("vite")) {
+        if (bundler.name.endsWith("vite")) {//判断是否使用的vite打包
           const bundlerConfig = config as ViteBundlerOptions;
 
           bundlerConfig.viteOptions = require("vite").mergeConfig(
@@ -62,7 +62,7 @@ export const gungnirTheme =
               ssr: {
                 noExternal: ["oh-vue-icons"]
               }
-            }
+            }//新增上述两个vite配置
           );
         }
       },
@@ -76,6 +76,7 @@ export const gungnirTheme =
 
       plugins: getPlugins(themePlugins, localeOptions),
 
+      //在生成暂存文件前修改页面配置
       onInitialized: async (app): Promise<void> => {
         createPages(app, localeOptions);
       }

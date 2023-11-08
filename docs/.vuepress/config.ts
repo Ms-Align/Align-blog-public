@@ -16,8 +16,8 @@ export default defineUserConfig({
         rel: "icon",
         type: "image/png",
         sizes: "16x16",
-        href: `/img/logo/favicon-16x16.png`
-      }
+        href: `/img/logo/favicon-16x16.png`,
+      },
     ],
     [
       "link",
@@ -25,22 +25,22 @@ export default defineUserConfig({
         rel: "icon",
         type: "image/png",
         sizes: "32x32",
-        href: `/img/logo/favicon-32x32.png`
-      }
+        href: `/img/logo/favicon-32x32.png`,
+      },
     ],
     ["link", { rel: "manifest", href: "/manifest.webmanifest" }],
     ["meta", { name: "application-name", content: "Gungnir Theme" }],
     ["meta", { name: "apple-mobile-web-app-title", content: "Gungnir Theme" }],
     [
       "meta",
-      { name: "apple-mobile-web-app-status-bar-style", content: "black" }
+      { name: "apple-mobile-web-app-status-bar-style", content: "black" },
     ],
     [
       "link",
-      { rel: "apple-touch-icon", href: `/img/logo/apple-touch-icon.png` }
+      { rel: "apple-touch-icon", href: `/img/logo/apple-touch-icon.png` },
     ],
     ["meta", { name: "theme-color", content: "#377bb5" }],
-    ["meta", { name: "msapplication-TileColor", content: "#377bb5" }]
+    ["meta", { name: "msapplication-TileColor", content: "#377bb5" }],
   ],
 
   // site-level locales config
@@ -48,13 +48,13 @@ export default defineUserConfig({
     "/": {
       lang: "en-US",
       title: "VuePress Theme Gungnir",
-      description: "A blog theme for VuePress"
+      description: "A blog theme for VuePress",
     },
     "/zh/": {
       lang: "zh-CN",
       title: "VuePress Theme Gungnir",
-      description: "VuePress 博客主题"
-    }
+      description: "VuePress 博客主题",
+    },
   },
 
   // specify bundler via environment variable
@@ -67,7 +67,7 @@ export default defineUserConfig({
     docsDir: "docs",
     navbarTitle: "Align",
 
-    hitokoto: "https://v1.hitokoto.cn?c=i", // enable hitokoto (一言) or not?
+    hitokoto: "http://124.223.165.180:2120/hitokoto", // enable hitokoto (一言) or not?
 
     // personal information
     personalInfo: {
@@ -85,29 +85,29 @@ export default defineUserConfig({
         // customized sns
         bilibili: {
           icon: "ri-bilibili-line",
-          link: "https://www.bilibili.com/"
-        }
-      }
+          link: "/",
+        },
+      },
     },
 
     // header images on home page
     homeHeaderImages: [
       {
         path: "/img/home-bg/1.jpg",
-        mask: "rgba(40, 57, 101, .4)"
+        mask: "rgba(40, 57, 101, .4)",
       },
       {
         path: "/img/home-bg/2.jpg",
-        mask: "rgb(251, 170, 152, .2)"
+        mask: "rgb(251, 170, 152, .2)",
       },
       {
         path: "/img/home-bg/3.jpg",
-        mask: "rgba(68, 74, 83, .1)"
+        mask: "rgba(68, 74, 83, .1)",
       },
       {
         path: "/img/home-bg/4.jpg",
-        mask: "rgba(19, 75, 50, .2)"
-      }
+        mask: "rgba(19, 75, 50, .2)",
+      },
     ],
 
     // other pages
@@ -116,16 +116,16 @@ export default defineUserConfig({
         subtitle: "Black Sheep Wall",
         bgImage: {
           path: "/img/pages/tags.jpg",
-          mask: "rgba(211, 136, 37, .5)"
-        }
+          mask: "rgba(211, 136, 37, .5)",
+        },
       },
       links: {
         subtitle: "开源项目，文章导航，通过以下连接快速前往",
         bgImage: {
           path: "/img/pages/links.jpg",
-          mask: "rgba(64, 118, 190, 0.5)"
-        }
-      }
+          mask: "rgba(64, 118, 190, 0.5)",
+        },
+      },
     },
 
     // theme-level locales config
@@ -139,7 +139,7 @@ export default defineUserConfig({
         // navbar
         navbar: navbar.en,
         // sidebar
-        sidebar: sidebar.en
+        sidebar: sidebar.en,
       },
 
       /**
@@ -151,8 +151,8 @@ export default defineUserConfig({
         // sidebar
         sidebar: sidebar.zh,
         // i18n
-        ...i18n.zh
-      }
+        ...i18n.zh,
+      },
     },
 
     // themePlugins: {
@@ -186,13 +186,13 @@ export default defineUserConfig({
       <br>
       Powered by <a href="https://v2.vuepress.vuejs.org" target="_blank">VuePress</a> &
       <a href="https://github.com/Renovamen/vuepress-theme-gungnir" target="_blank">Gungnir</a>
-    `
+    `,
   }),
 
   markdown: {
     headers: {
-      level: [2, 3, 4, 5]
-    }
+      level: [2, 3, 4, 5],
+    },
   },
 
   plugins: [
@@ -206,14 +206,14 @@ export default defineUserConfig({
           translations: {
             button: {
               buttonText: "搜索文档",
-              buttonAriaLabel: "搜索文档"
+              buttonAriaLabel: "搜索文档",
             },
             modal: {
               searchBox: {
                 resetButtonTitle: "清除查询条件",
                 resetButtonAriaLabel: "清除查询条件",
                 cancelButtonText: "取消",
-                cancelButtonAriaLabel: "取消"
+                cancelButtonAriaLabel: "取消",
               },
               startScreen: {
                 recentSearchesTitle: "搜索历史",
@@ -221,28 +221,28 @@ export default defineUserConfig({
                 saveRecentSearchButtonTitle: "保存至搜索历史",
                 removeRecentSearchButtonTitle: "从搜索历史中移除",
                 favoriteSearchesTitle: "收藏",
-                removeFavoriteSearchButtonTitle: "从收藏中移除"
+                removeFavoriteSearchButtonTitle: "从收藏中移除",
               },
               errorScreen: {
                 titleText: "无法获取结果",
-                helpText: "你可能需要检查你的网络连接"
+                helpText: "你可能需要检查你的网络连接",
               },
               footer: {
                 selectText: "选择",
                 navigateText: "切换",
                 closeText: "关闭",
-                searchByText: "搜索提供者"
+                searchByText: "搜索提供者",
               },
               noResultsScreen: {
                 noResultsText: "无法找到相关结果",
                 suggestedQueryText: "你可以尝试查询",
                 reportMissingResultsText: "你认为该查询应该有结果？",
-                reportMissingResultsLinkText: "点击反馈"
-              }
-            }
-          }
-        }
-      }
-    })
-  ]
+                reportMissingResultsLinkText: "点击反馈",
+              },
+            },
+          },
+        },
+      },
+    }),
+  ],
 });

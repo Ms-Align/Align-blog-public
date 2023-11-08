@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-f57d0670","path":"/posts/documents/reactDnd/","title":"\u76EE\u5F55","lang":"en-US","frontmatter":{"icon":"repo","article":"Align","title":"\u76EE\u5F55"},"excerpt":"","headers":[],"git":{"updatedTime":1696926604000},"readingTime":{"minutes":1,"words":67},"filePathRelative":"posts/documents/reactDnd/README.md"}');export{e as data};
