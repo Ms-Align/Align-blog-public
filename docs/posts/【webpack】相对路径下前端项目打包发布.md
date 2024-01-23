@@ -4,7 +4,7 @@ title: 【webpack】相对路径下前端项目打包发布
 subtitle: 源于一次失败的项目部署
 author: Align
 date: 2023-10-27
-headerImage: /img/in-post/2021-12-24/header.jpg
+headerImage: /img/in-post/covers/webpack相对路径打包发布.png
 tags:
   - 前端
   - react

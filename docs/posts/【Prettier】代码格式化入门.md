@@ -4,7 +4,7 @@ title: 【Prettier】代码格式化入门
 subtitle: 帮助快速入门并使用prettier
 author: Align
 date: 2023-11-20
-headerImage: /img/in-post/2021-12-24/header.jpg
+headerImage: /img/in-post/covers/prettier入门.png
 tags:
   - 前端
   - prettier

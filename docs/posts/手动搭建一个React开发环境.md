@@ -4,7 +4,7 @@ title: 手动搭建一个React开发环境
 subtitle: 了解下前端项目构建
 author: Align
 date: 2023-10-16
-headerImage: /img/in-post/2021-12-24/header.jpg
+headerImage: /img/in-post/covers/手动搭建react开发环境.png
 tags:
   - 前端
   - React
