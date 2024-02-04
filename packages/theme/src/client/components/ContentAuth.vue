@@ -33,7 +33,6 @@ const rules = reactive<FormRules<any>>({
 const onAuthPsd = () => {
     formInstance.value?.validate()?.then(() => {
         //校验密码
-        console.log(form)
         if (frontmatter.value.auth[1] == form.value.auth) {
             emit('onSuccess')
         } else {
