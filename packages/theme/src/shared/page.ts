@@ -24,6 +24,7 @@ export interface GungnirThemeNormalPageFrontmatter
   sidebarDepth?: number;
   prev?: string | NavLink;
   next?: string | NavLink;
+  auth?:any
   giscus?: boolean;
 }
 
@@ -40,6 +41,7 @@ export interface GungnirThemePostFrontmatter
   headerImage: string;
   headerMask?: string;
   headerImageCredit?: string;
+  auth?:any
   headerImageCreditLink?: string;
   catalog?: boolean;
   tags?: string[];

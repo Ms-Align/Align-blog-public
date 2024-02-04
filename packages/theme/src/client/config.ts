@@ -1,5 +1,7 @@
 import { defineClientConfig } from "@vuepress/client";
 import { addIcons, OhVueIcon } from "oh-vue-icons";
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 import {
   BiLayoutSidebarInset,
   FaChevronDown,
@@ -78,6 +80,8 @@ export default defineClientConfig({
 
     // link card
     app.component("LinkCard", LinkCard);
+    
+    app.use(ElementPlus)
 
     // built-in SearchPage component
     app.component("GungnirSearchPage", () => {

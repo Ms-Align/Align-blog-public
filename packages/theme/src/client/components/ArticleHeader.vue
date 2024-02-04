@@ -1,24 +1,12 @@
 <template>
-  <div
-    class="article-header"
-    :style="headerStyle()"
-    :class="{ 'use-image': frontmatter.useHeaderImage }"
-  >
-    <div
-      v-if="frontmatter.useHeaderImage && frontmatter.headerMask"
-      class="article-header-mask"
-      :style="{ background: frontmatter.headerMask }"
-    />
+  <div class="article-header" :style="headerStyle()" :class="{ 'use-image': frontmatter.useHeaderImage }">
+    <div v-if="frontmatter.useHeaderImage && frontmatter.headerMask" class="article-header-mask"
+      :style="{ background: frontmatter.headerMask }" />
 
     <div class="article-header-content">
       <div v-if="frontmatter.tags" class="article-tags">
-        <RouterLink
-          v-for="(item, index) in frontmatter.tags"
-          :key="index"
-          class="article-tag"
-          :class="{ active: currentTag == item }"
-          :to="getPathByTag(item)"
-        >
+        <RouterLink v-for="(item, index) in frontmatter.tags" :key="index" class="article-tag"
+          :class="{ active: currentTag == item }" :to="getPathByTag(item)">
           {{ item }}
         </RouterLink>
       </div>
@@ -32,10 +20,7 @@
       </p>
 
       <div class="article-icons">
-        <div
-          v-if="frontmatter.author || personalInfo.name"
-          class="article-icon"
-        >
+        <div v-if="frontmatter.author || personalInfo.name" class="article-icon">
           <VIcon name="fa-regular-user" />
           <span>{{ frontmatter.author || personalInfo.name }}</span>
         </div>
@@ -51,17 +36,10 @@
         </div>
       </div>
     </div>
-    <div
-      v-if="frontmatter.useHeaderImage && frontmatter.headerImageCredit"
-      class="article-image-credit"
-    >
+    <div v-if="frontmatter.useHeaderImage && frontmatter.headerImageCredit" class="article-image-credit">
       {{ themeLocale.headerImageCredit }}
-      <a
-        v-if="frontmatter.headerImageCreditLink"
-        :href="frontmatter.headerImageCreditLink"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a v-if="frontmatter.headerImageCreditLink" :href="frontmatter.headerImageCreditLink" target="_blank"
+        rel="noopener noreferrer">
         {{ frontmatter.headerImageCredit }}
       </a>
       <span v-else>{{ frontmatter.headerImageCredit }}</span>
