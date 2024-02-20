@@ -1,22 +1,15 @@
 <template>
   <div class="sns-wrapper">
     <!-- SNS -->
-    <a
-      v-for="(user, platform) in sns"
-      :key="`${platform}-${user}`"
-      :href="getSNSLink(user, platform)"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <VIcon class="icon-stack">
-        <VIcon v-if="large" name="fa-circle" scale="2.3" class="icon-circle" />
-        <VIcon
-          :name="getSNSIcon(user, platform)"
-          :scale="getSNSIconScale(user, platform)"
-          class="icon-sns"
-          inverse
-        />
-      </VIcon>
+    <a v-for="(user, platform) in sns" :key="`${platform}-${user}`" :href="getSNSLink(user, platform)" target="_blank"
+      rel="noopener noreferrer">
+      <el-tooltip class="box-item" effect="dark" :content="(user as any).text ? user?.link : platform" placement="top">
+        <VIcon class="icon-stack">
+          <VIcon v-if="large" name="fa-circle" scale="2.3" class="icon-circle" />
+          <VIcon :name="getSNSIcon(user, platform)" :scale="getSNSIconScale(user, platform)" class="icon-sns" inverse />
+        </VIcon>
+      </el-tooltip>
+
     </a>
   </div>
 </template>
@@ -28,6 +21,10 @@ import { useThemeLocaleData } from "../composables";
 const defaultSNS = {
   github: {
     icon: "fa-github-alt",
+    preLink: "https://github.com/"
+  },
+  gitee: {
+    icon: "si-gitee",
     preLink: "https://github.com/"
   },
   linkedin: {
@@ -72,6 +69,7 @@ const themeLocale = useThemeLocaleData();
 const sns = themeLocale.value.personalInfo?.sns;
 
 const getSNSLink = (user: SNSItem, platform: string): string => {
+  console.log(2120, user, platform)
   return typeof user === "string"
     ? defaultSNS[platform].preLink + user
     : user.link;

@@ -7,12 +7,15 @@ links:
       - sitename: Align
         url: https://gitee.com/aligns/align
         img: /img/avatar.jpg
-        desc: Vue3博客项目
+        desc: Vue3博客项目，vue技能实践网站
       - sitename: Align-server
         url: https://gitee.com/aligns/Align-server
         img: /img/avatar.jpg
         desc: 基于egg的博客后台  
-        
+      - sitename: Avidor
+        url: https://gitee.com/aligns/avditor
+        img: /img/avatar.jpg
+        desc: 与本站结合的markdown编辑器
   - title: 技术文档
     items:
       - sitename: Yjs

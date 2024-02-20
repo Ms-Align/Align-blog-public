@@ -24,6 +24,7 @@ import {
   HiTranslate,
   RiRssFill,
   RiSearch2Line,
+  SiGitee,
   RiTimerLine,
   RiWeiboFill,
   RiZhihuLine
@@ -48,6 +49,7 @@ addIcons(
   FaChevronLeft,
   FaChevronRight,
   FaMagic,
+  SiGitee,
   FaSun,
   FaMoon,
   FaGithubAlt,

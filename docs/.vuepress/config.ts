@@ -75,18 +75,26 @@ export default defineUserConfig({
       avatar: "/img/avatar.jpg",
       description: "二月爱凌, 梦亦同趋, Align...",
       sns: {
-        github: "/",
-        linkedin: "/",
-        facebook: "/",
-        twitter: "/",
-        zhihu: "/",
-        email: "1739174050@qq.com",
-        rss: "/rss.xml",
-        // customized sns
-        bilibili: {
-          icon: "ri-bilibili-line",
-          link: "/",
+        gitee: {
+          icon: "si-gitee",
+          link: "https://gitee.com/aligns",
         },
+        github: "https://github.com/Ms-Align",
+        // linkedin: "/",
+        // facebook: "/",
+        // twitter: "/",
+        // zhihu: "/",
+        email: {
+          icon: "fa-envelope",
+          text: true,
+          link: "1739174050@qq.com",
+        },
+        // rss: "/rss.xml",
+        // customized sns
+        // bilibili: {
+        //   icon: "ri-bilibili-line",
+        //   link: "/",
+        // },
       },
     },
 
