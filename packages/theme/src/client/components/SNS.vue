@@ -69,7 +69,6 @@ const themeLocale = useThemeLocaleData();
 const sns = themeLocale.value.personalInfo?.sns;
 
 const getSNSLink = (user: SNSItem, platform: string): string => {
-  console.log(2120, user, platform)
   return typeof user === "string"
     ? defaultSNS[platform].preLink + user
     : user.link;
