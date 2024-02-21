@@ -665,7 +665,7 @@ export default () => <RouterProvider router={router}></RouterProvider>;
 npm install react-router-dom
 ```
 
-src目录下我们创建routes文件夹并创建index.ts文件用来存放我们的路由:
+src目录下我们创建routes文件夹并创建index.ts文件用来存放我们的路由配置:
 
 ```js
 import { RouteObject } from "react-router-dom";
