@@ -3,12 +3,12 @@
     <!-- SNS -->
     <a v-for="(user, platform) in sns" :key="`${platform}-${user}`" :href="getSNSLink(user, platform)" target="_blank"
       rel="noopener noreferrer">
-      <el-tooltip class="box-item" effect="dark" :content="(user as any).text ? user?.link : platform" placement="top">
-        <VIcon class="icon-stack">
-          <VIcon v-if="large" name="fa-circle" scale="2.3" class="icon-circle" />
-          <VIcon :name="getSNSIcon(user, platform)" :scale="getSNSIconScale(user, platform)" class="icon-sns" inverse />
-        </VIcon>
-      </el-tooltip>
+      <!-- <el-tooltip class="box-item" effect="dark" :content="(user as any)?.text ? user?.link : platform" placement="top"> -->
+      <VIcon class="icon-stack">
+        <VIcon v-if="large" name="fa-circle" scale="2.3" class="icon-circle" />
+        <VIcon :name="getSNSIcon(user, platform)" :scale="getSNSIconScale(user, platform)" class="icon-sns" inverse />
+      </VIcon>
+      <!-- </el-tooltip> -->
 
     </a>
   </div>
