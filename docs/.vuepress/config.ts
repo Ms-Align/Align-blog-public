@@ -40,6 +40,7 @@ export default defineUserConfig({
       { rel: "apple-touch-icon", href: `/img/logo/apple-touch-icon.png` },
     ],
     ["meta", { name: "theme-color", content: "#377bb5" }],
+    ["meta", { name: "baidu-site-verification", content: "codeva-vBshr0k65G" }],
     ["meta", { name: "msapplication-TileColor", content: "#377bb5" }],
   ],
 
