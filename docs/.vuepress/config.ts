@@ -68,7 +68,8 @@ export default defineUserConfig({
     docsDir: "docs",
     navbarTitle: "Align",
 
-    hitokoto: "http://124.223.165.180:2120/hitokoto", // enable hitokoto (一言) or not?
+    // hitokoto: "http://124.223.165.180:2120/hitokoto", // enable hitokoto (一言) or not?
+    hitokoto: "https://v1.hitokoto.cn?c=i", // enable hitokoto (一言) or not?
 
     // personal information
     personalInfo: {
@@ -80,7 +81,7 @@ export default defineUserConfig({
           icon: "si-gitee",
           link: "https://gitee.com/aligns",
         },
-        github: "https://github.com/Ms-Align",
+        github: "Ms-Align",
         // linkedin: "/",
         // facebook: "/",
         // twitter: "/",
@@ -191,10 +192,9 @@ export default defineUserConfig({
     // },
 
     footer: `
-      &copy; <a href="https://github.com/Renovamen" target="_blank">Align</a> 2018-2022
+      &copy; <a href="https://github.com/Ms-Align" target="_blank">Align</a> 2024-2024
       <br>
-      Powered by <a href="https://v2.vuepress.vuejs.org" target="_blank">VuePress</a> &
-      <a href="https://github.com/Renovamen/vuepress-theme-gungnir" target="_blank">Gungnir</a>
+      Powered by <a href="https://v2.vuepress.vuejs.org" target="_blank">VuePress</a>
     `,
   }),
 

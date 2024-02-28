@@ -11,6 +11,7 @@ import {
   RiBilibiliLine,
   RiBook2Fill,
   RiGithubLine,
+  RiHeartPulseFill,
   RiSailboatLine,
   RiVuejsLine,
 } from "oh-vue-icons/icons";
@@ -19,6 +20,7 @@ addIcons(
   RiBilibiliLine,
   FaFortAwesome,
   FaTag,
+  RiHeartPulseFill,
   FaSatelliteDish,
   RiBook2Fill,
   RiArticleLine,

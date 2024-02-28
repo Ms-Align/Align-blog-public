@@ -7,6 +7,11 @@ export const en: NavbarConfig = [
     icon: "fa-fort-awesome",
   },
   {
+    text: "记忆",
+    link: "memory",
+    icon: "ri-heart-pulse-fill",
+  },
+  {
     text: "标签",
     link: "/tags/",
     icon: "fa-tag",
