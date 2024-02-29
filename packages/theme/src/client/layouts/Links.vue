@@ -4,18 +4,10 @@
       <PageHeader :page-info="pageInfo" />
 
       <div class="links-wrapper">
-        <div
-          v-for="(group, groupId) in frontmatter.links"
-          :key="`link-group-${groupId}`"
-          class="link-section"
-        >
+        <div v-for="(group, groupId) in frontmatter.links" :key="`link-group-${groupId}`" class="link-section">
           <h2>{{ group.title }}</h2>
           <div class="link-group">
-            <div
-              v-for="(item, itemId) in group.items"
-              :key="`link-${itemId}`"
-              class="link-item"
-            >
+            <div v-for="(item, itemId) in group.items" :key="`link-${itemId}`" class="link-item">
               <div class="content">
                 <a :href="item.url" target="_blank" rel="noopener noreferrer">
                   <img :src="$withBase(item.img)" />
