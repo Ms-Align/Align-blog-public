@@ -1,16 +1,7 @@
 <template>
-  <div
-    class="theme-container"
-    :class="containerClass"
-    @touchstart="onTouchStart"
-    @touchend="onTouchEnd"
-  >
+  <div class="theme-container" :class="containerClass" @touchstart="onTouchStart" @touchend="onTouchEnd">
     <slot name="navbar">
-      <Navbar
-        v-if="shouldShowNavbar"
-        :is-sidebar="shouldShowSidebar"
-        @toggle-search="toggleSearch(true)"
-      >
+      <Navbar v-if="shouldShowNavbar" :is-sidebar="shouldShowSidebar" @toggle-search="toggleSearch(true)">
         <template #before>
           <slot name="navbar-before" />
         </template>

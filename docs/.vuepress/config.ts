@@ -131,13 +131,19 @@ export default defineUserConfig({
         },
       },
       links: {
-        subtitle: "开源项目，文章导航，通过以下连接快速前往",
+        subtitle: "开源项目，文档导航，通过以下连接快速前往",
         bgImage: {
           path: "/img/pages/links.jpg",
           mask: "rgba(64, 118, 190, 0.5)",
         },
       },
-      memory: {},
+      memorys: {
+        subtitle: "飞向遥远的天空",
+        bgImage: {
+          path: "/img/pages/memorys.jpg",
+          mask: "rgba(64, 118, 190, 0.5)",
+        },
+      },
     },
 
     // theme-level locales config
