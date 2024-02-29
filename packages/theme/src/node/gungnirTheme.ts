@@ -23,7 +23,6 @@ export const gungnirTheme =
     assignDefaultLocaleOptions(localeOptions);//合并一些默认的配置
 
     localeOptions.search = !(themePlugins.search === false);
-
     return {
       name: "vuepress-theme-gungnir",
 

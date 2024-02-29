@@ -47,7 +47,7 @@ export const DEFAULT_LOCALE_OPTIONS: GungnirThemeLocaleOptions = {
   // footer
   footer: `
     Powered by <a href="https://v2.vuepress.vuejs.org" target="_blank">VuePress</a> &
-    <a href="https://github.com/Renovamen/vuepress-theme-gungnir" target="_blank">Gungnir</a>
+    <a href="https://github.com/Ms-Align" target="_blank">Align</a>
   `,
 
   ...deleteSelectLanguageName(en)

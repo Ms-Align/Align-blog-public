@@ -64,7 +64,8 @@ export default defineUserConfig({
 
   // configure default theme
   theme: gungnirTheme({
-    repo: "Renovamen/vuepress-theme-gungnir",
+    repo: null,
+    // repo: "Ms-Align/Align-blog-public",
     docsDir: "docs",
     navbarTitle: "Align",
 
@@ -136,6 +137,7 @@ export default defineUserConfig({
           mask: "rgba(64, 118, 190, 0.5)",
         },
       },
+      memory: {},
     },
 
     // theme-level locales config

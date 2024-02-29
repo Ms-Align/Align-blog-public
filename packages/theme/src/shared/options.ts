@@ -18,6 +18,7 @@ export interface GungnirThemePageOptions {
 export interface GungnirThemePagesOptions {
   tags?: GungnirThemePageOptions;
   links?: GungnirThemePageOptions;
+  memory?:any
 }
 
 export type GungnirThemeLocaleOptions = GungnirThemeData;

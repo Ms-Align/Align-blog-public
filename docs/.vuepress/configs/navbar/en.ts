@@ -8,7 +8,7 @@ export const en: NavbarConfig = [
   },
   {
     text: "记忆",
-    link: "memory",
+    link: "/memorys/",
     icon: "ri-heart-pulse-fill",
   },
   {
