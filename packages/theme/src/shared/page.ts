@@ -59,9 +59,26 @@ interface LinkGroup {
   title: string;
   item: Array<LinkItem>;
 }
-
+interface Memory {
+  content?:string
+  desc?:string 
+  img?:[] //配图
+  time?:string //时刻
+  title?:string
+  tem?:string //气温
+  avatar?:string //头像
+  owner?:string//拥有者
+  weather?:string //天气
+  location?:string //地点
+  [key:string]:any
+}
+interface MemoryGroup {
+  date:string //日期(不精确到人)
+  memory:Array<Memory>
+}
 export interface GungnirThemeLinksPageFrontmatter
   extends GungnirThemePageFrontmatter {
   title?: string;
   links: Array<LinkGroup>;
+  memorys?:Array<MemoryGroup>
 }

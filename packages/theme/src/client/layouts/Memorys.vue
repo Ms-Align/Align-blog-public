@@ -3,7 +3,47 @@
         <template #page>
             <PageHeader :page-info="pageInfo" />
             <div class="tags-wrapper">
-                开发中...
+                <el-timeline>
+                    <el-timeline-item v-for="(record, index) in frontmatter.memorys" :timestamp="record.date"
+                        placement="top">
+                        <div v-for="(memory, index) in record.memory">
+                            <el-card>
+                                <template #header>
+                                    <div class="card-header">
+                                        <el-space>
+                                            <el-avatar shape="square" size="small" :src="memory.avatar" />
+                                            <el-button type="primary" style="font-weight: bold;" link>
+                                                {{ memory.owner }}
+                                            </el-button>
+                                        </el-space>
+
+                                    </div>
+                                </template>
+                                <el-row :gutter="6">
+                                    <el-col :span="24">
+                                        <el-text style="margin: 16px 0;" class="mx-1" size="large">
+                                            {{ memory.content }}
+                                        </el-text>
+                                    </el-col>
+                                </el-row>
+                                <el-row style="padding-top: 16px;" :gutter="6" v-if="memory?.img?.length">
+                                    <el-col :span="6" v-for="(src, index) in memory?.img">
+                                        <el-image :preview-src-list="memory?.img" :src="src" :zoom-rate="1.2" :max-scale="7"
+                                            :min-scale="0.2" :initial-index="4" fit="cover" />
+                                    </el-col>
+                                </el-row>
+                                <template #footer>
+                                    <div class="card-header">
+                                        <el-text class="mx-1" type="info" size="large">
+                                            {{ memory.time }}
+                                        </el-text>
+                                    </div>
+                                </template>
+                            </el-card>
+                            <el-divider />
+                        </div>
+                    </el-timeline-item>
+                </el-timeline>
             </div>
         </template>
     </Common>
@@ -22,6 +62,7 @@ import { useThemeLocaleData } from "../composables";
 
 const themeLocale = useThemeLocaleData();
 const frontmatter = usePageFrontmatter<GungnirThemeLinksPageFrontmatter>();
+console.log(2120, frontmatter)
 const pageInfo = computed(() => {
     const info = (
         themeLocale.value.pages && themeLocale.value.pages.memorys
