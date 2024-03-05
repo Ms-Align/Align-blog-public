@@ -26,6 +26,7 @@ import {
   RiSearch2Line,
   SiGitee,
   RiTimerLine,
+  BiPostcardHeartFill,
   RiWeiboFill,
   RiZhihuLine
 } from "oh-vue-icons/icons";
@@ -47,6 +48,7 @@ addIcons(
   FaChevronDown,
   FaChevronUp,
   FaChevronLeft,
+  BiPostcardHeartFill,
   FaChevronRight,
   FaMagic,
   SiGitee,

@@ -4,8 +4,8 @@
             <PageHeader :page-info="pageInfo" />
             <div class="tags-wrapper">
                 <el-timeline>
-                    <el-timeline-item v-for="(record, index) in frontmatter.memorys" :timestamp="record.date"
-                        placement="top">
+                    <el-timeline-item type='primary' hollow v-for="(record, index) in frontmatter.memorys"
+                        :timestamp="record.date" placement="top">
                         <div v-for="(memory, index) in record.memory">
                             <el-card>
                                 <template #header>
@@ -16,7 +16,6 @@
                                                 {{ memory.owner }}
                                             </el-button>
                                         </el-space>
-
                                     </div>
                                 </template>
                                 <el-row :gutter="6">
@@ -28,10 +27,11 @@
                                 </el-row>
                                 <el-row style="padding-top: 16px;" :gutter="6" v-if="memory?.img?.length">
                                     <el-col :span="6" v-for="(src, index) in memory?.img">
-                                        <el-image :preview-src-list="memory?.img" :src="src" :zoom-rate="1.2" :max-scale="7"
-                                            :min-scale="0.2" :initial-index="4" fit="cover" />
+                                        <el-image :preview-src-list="memory?.img" :src="src" :zoom-rate="1.2"
+                                            :max-scale="7" :min-scale="0.2" :initial-index="4" fit="cover" />
                                     </el-col>
                                 </el-row>
+
                                 <template #footer>
                                     <div class="card-header">
                                         <el-text class="mx-1" type="info" size="large">
@@ -40,7 +40,9 @@
                                     </div>
                                 </template>
                             </el-card>
-                            <el-divider />
+                            <el-divider>
+                                <v-icon fill="rgb(156, 205, 255)" name="bi-postcard-heart-fill" animation="pulse" />
+                            </el-divider>
                         </div>
                     </el-timeline-item>
                 </el-timeline>
@@ -48,7 +50,7 @@
         </template>
     </Common>
 </template>
-  
+
 <script setup lang="ts">
 import Common from "@theme/Common.vue";
 import PageHeader from "@theme/PageHeader.vue";
@@ -62,7 +64,6 @@ import { useThemeLocaleData } from "../composables";
 
 const themeLocale = useThemeLocaleData();
 const frontmatter = usePageFrontmatter<GungnirThemeLinksPageFrontmatter>();
-console.log(2120, frontmatter)
 const pageInfo = computed(() => {
     const info = (
         themeLocale.value.pages && themeLocale.value.pages.memorys
@@ -73,4 +74,3 @@ const pageInfo = computed(() => {
     return info;
 });
 </script>
-  
