@@ -33,6 +33,13 @@ export default defineUserConfig({
     ["meta", { name: "apple-mobile-web-app-title", content: "Gungnir Theme" }],
     [
       "meta",
+      {
+        "http-equiv": "Content-Security-Policy",
+        content: "upgrade-insecure-requests",
+      },
+    ],
+    [
+      "meta",
       { name: "apple-mobile-web-app-status-bar-style", content: "black" },
     ],
     [
