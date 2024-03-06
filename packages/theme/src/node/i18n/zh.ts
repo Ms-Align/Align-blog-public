@@ -40,7 +40,8 @@ const zh: GungnirThemeI18n = {
   // other pages
   pageText: {
     tags: "标签",
-    links: "链接"
+    links: "链接",
+    memorys:"Memorys"
   },
 
   // "show all tags" button
