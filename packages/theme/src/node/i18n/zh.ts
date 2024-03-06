@@ -41,7 +41,7 @@ const zh: GungnirThemeI18n = {
   pageText: {
     tags: "标签",
     links: "链接",
-    memorys:"Memorys"
+    memorys:"记忆"
   },
 
   // "show all tags" button
