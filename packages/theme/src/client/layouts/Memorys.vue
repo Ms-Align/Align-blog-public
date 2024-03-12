@@ -2,6 +2,9 @@
     <Common>
         <template #page>
             <PageHeader :page-info="pageInfo" />
+            <audio loop="true" ref="audioRef" autoplay="true" :src="`data:audio/mp3;base64,${TK}`
+                ">
+            </audio>
             <div class="tags-wrapper">
                 <el-timeline>
                     <el-timeline-item type='primary' hollow v-for="(record, index) in frontmatter.memorys"
@@ -55,14 +58,16 @@
 import Common from "@theme/Common.vue";
 import PageHeader from "@theme/PageHeader.vue";
 import { usePageFrontmatter } from "@vuepress/client";
-import { computed } from "vue";
+import { TK } from '../../../public/tk';
+import { computed, ref } from "vue";
 import type {
     GungnirThemeLinksPageFrontmatter,
     GungnirThemePageOptions
 } from "../../shared";
+import { ElMessage, ElMessageBox } from 'element-plus'
 import { useThemeLocaleData } from "../composables";
-
 const themeLocale = useThemeLocaleData();
+const audioRef = ref(null)
 const frontmatter = usePageFrontmatter<GungnirThemeLinksPageFrontmatter>();
 const pageInfo = computed(() => {
     const info = (
@@ -73,4 +78,14 @@ const pageInfo = computed(() => {
     if (info.title === undefined) info.title = themeLocale.value.pageText?.memorys;
     return info;
 });
+ElMessageBox.alert('我们为Memory提供了背景音乐，希望你喜欢。', 'Align', {
+    // if you want to disable its autofocus
+    // autofocus: false,
+    confirmButtonText: '开始吧！',
+    "show-close": false,
+    callback: (action: Action) => {
+        audioRef.value?.play()
+    },
+})
+
 </script>

@@ -1,13 +1,9 @@
 <template>
-  <header
-    ref="navbar"
-    class="navbar"
-    :class="{
-      'is-fixed': isFixed || isSidebar,
-      'is-visible': isVisible || isSidebar,
-      invert: isInvert
-    }"
-  >
+  <header ref="navbar" class="navbar" :class="{
+    'is-fixed': isFixed || isSidebar,
+    'is-visible': isVisible || isSidebar,
+    invert: isInvert
+  }">
     <span ref="navbarBrand">
       <RouterLink :to="navbarBrandLink">
         <span class="site-name">
@@ -15,7 +11,6 @@
         </span>
       </RouterLink>
     </span>
-
     <div class="navbar-items-wrapper" :style="linksWrapperStyle">
       <slot name="before" />
       <NavbarItems class="can-hide" @toggle-search="$emit('toggle-search')" />
