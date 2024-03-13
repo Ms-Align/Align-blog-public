@@ -67,7 +67,11 @@ export default defineUserConfig({
 
   // specify bundler via environment variable
   bundler:
-    process.env.DOCS_BUNDLER === "webpack" ? webpackBundler() : viteBundler(),
+    process.env.DOCS_BUNDLER === "webpack"
+      ? webpackBundler()
+      : viteBundler({
+          viteOptions: { build: { chunkSizeWarningLimit: 5000 } },
+        }),
 
   // configure default theme
   theme: gungnirTheme({

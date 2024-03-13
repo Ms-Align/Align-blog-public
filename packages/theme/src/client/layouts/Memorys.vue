@@ -7,14 +7,14 @@
             </audio>
             <div class="tags-wrapper">
                 <el-timeline>
-                    <el-timeline-item type='primary' hollow v-for="(record, index) in frontmatter.memorys"
-                        :timestamp="record.date" placement="top">
-                        <div v-for="(memory, index) in record.memory">
+                    <el-timeline-item type='primary' hollow v-for="(record, index) in (frontmatter?.memorys || [])"
+                        :timestamp="record?.date" placement="top">
+                        <div v-for="(memory, index) in record?.memory">
                             <el-card>
                                 <template #header>
                                     <div class="card-header">
                                         <el-space>
-                                            <el-avatar shape="square" size="small" :src="memory.avatar" />
+                                            <el-avatar shape="square" size="small" :src="memory?.avatar" />
                                             <el-button type="primary" style="font-weight: bold;" link>
                                                 {{ memory.owner }}
                                             </el-button>
@@ -59,7 +59,7 @@ import Common from "@theme/Common.vue";
 import PageHeader from "@theme/PageHeader.vue";
 import { usePageFrontmatter } from "@vuepress/client";
 import { TK } from '../../../public/tk';
-import { computed, ref } from "vue";
+import { computed, ref, onMounted } from "vue";
 import type {
     GungnirThemeLinksPageFrontmatter,
     GungnirThemePageOptions
@@ -82,9 +82,8 @@ ElMessageBox.alert('我们为Memory提供了背景音乐，希望你喜欢。', 
     // if you want to disable its autofocus
     // autofocus: false,
     confirmButtonText: '开始吧！',
-    "show-close": false,
-    callback: (action: Action) => {
-        audioRef.value?.play()
+    callback: (action: any) => {
+        (audioRef.value as any).play()
     },
 })
 
