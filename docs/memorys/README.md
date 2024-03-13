@@ -16,7 +16,7 @@ memorys:
           - 南京市
           - 雨花台区
         img:
-          - http://124.223.165.180/api/static/images/https://124.223.165.180/api/static/images/bfeecf84da3df8eb2f6d4a4c2a9db255.png
+          - http://124.223.165.180/api/static/images/bfeecf84da3df8eb2f6d4a4c2a9db255.png
   - date: "2024-03-11"
     memory:
       - title: 
