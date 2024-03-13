@@ -2,6 +2,21 @@
 layout: Memorys
 title: Memorys
 memorys:
+  - date: "2024-03-13"
+    memory:
+      - title: 
+        time: "09:54:55"
+        avatar: /img/avatar.jpg
+        content: "我这一天天的也就嘴硬了。不然呢，你以为我为什么记得这首从来没听过的歌。反正这么多年过去了，以前的事又有什么好说的呢。不好意思，这个话题我没办法回应你。"
+        weather: 
+        tem: 
+        desc: 
+        owner: Align
+        location:
+          - 南京市
+          - 雨花台区
+        img:
+          - http://124.223.165.180/api/static/images/https://124.223.165.180/api/static/images/bfeecf84da3df8eb2f6d4a4c2a9db255.png
   - date: "2024-03-11"
     memory:
       - title: 
