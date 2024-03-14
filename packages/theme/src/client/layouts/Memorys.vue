@@ -2,17 +2,7 @@
     <Common>
         <template #page>
             <PageHeader :page-info="pageInfo" />
-            <el-dialog v-model="dialogVisible" title="Memory提示" width="500" :before-close="handleClose">
-                <span>Memory模块我们特地提供了背景音乐，希望你喜欢。</span>
-                <template #footer>
-                    <div class="dialog-footer">
-                        <el-button type="primary" @click="handleClose">
-                            开始吧
-                        </el-button>
-                    </div>
-                </template>
-            </el-dialog>
-            <audio loop="true" ref="audioRef" autoplay="true"
+            <audio loop="true" preload="auto" ref="audioRef" autoplay="true"
                 src="https://124.223.165.180/api/static/musics/376db03817986dd1bae7f5f206340fb9.mpeg">
             </audio>
             <div class="tags-wrapper">
@@ -88,12 +78,14 @@ const pageInfo = computed(() => {
     if (info.title === undefined) info.title = themeLocale.value.pageText?.memorys;
     return info;
 });
-const dialogVisible = ref(true)
 
-const handleClose = (done: () => void) => {
+const toggleMusic = (done: () => void) => {
     (audioRef.value as any).play()
-    dialogVisible.value = false
 }
+document.body.addEventListener('click', function () {
+    // 在此处编写滚动时需要执行的代码
+    toggleMusic()
+});
 // ElMessageBox.alert('我们为Memory提供了背景音乐，希望你喜欢。', 'Align', {
 //     // if you want to disable its autofocus
 //     // autofocus: false,
