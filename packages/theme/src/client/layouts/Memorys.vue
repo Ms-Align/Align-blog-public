@@ -1,40 +1,70 @@
 <template>
     <Common>
         <template #page>
+            <el-card shadow="always" :style="{
+                display: authModal?.length ? undefined : 'none', position: 'absolute',
+                top: '50%',
+                left: '50%',
+                'max-width': '480px',
+                transform: 'translate(-50%, -50%)',
+                'z-index': 2
+            }" title="权限校验">
+                <div>
+                    <el-input v-model="psdInput" @change="onAuth" style="width: 240px" placeholder="请校验">
+                        <template #prepend>{{ authModal?.[0] || '请校验身份' }}</template>
+                    </el-input>
+                    <el-button type="danger" @click="authModal = []">取消</el-button>
+                </div>
+            </el-card>
+
             <PageHeader :page-info="pageInfo" />
             <audio loop="true" preload="auto" ref="audioRef" autoplay="true"
                 src="https://124.223.165.180/api/static/musics/376db03817986dd1bae7f5f206340fb9.mpeg">
             </audio>
             <div class="tags-wrapper">
                 <el-timeline>
-                    <el-timeline-item type='primary' hollow v-for="( record, index ) in  (frontmatter?.memorys || []) "
-                        :timestamp="record?.date" placement="top">
-                        <div v-for="( memory, index ) in  record?.memory ">
+                    <el-timeline-item type='primary' hollow
+                        v-for="(   record, index   ) in (frontmatter?.memorys || [])" :timestamp="record?.date"
+                        placement="top">
+                        <div v-for="(   memory, index   ) in record?.memory">
                             <el-card>
                                 <template #header>
                                     <div class="card-header">
-                                        <el-space>
-                                            <el-avatar shape="square" size="small" :src="memory?.avatar" />
-                                            <el-button type="primary" style="font-weight: bold;" link>
-                                                {{ memory.owner }}
-                                            </el-button>
+                                        <el-space style="justify-content: space-between;width: 100%;">
+                                            <div style="display: flex;">
+                                                <el-avatar shape="square" size="small" :src="memory?.avatar" />
+                                                <el-button type="primary" style="font-weight: bold;" link>
+                                                    {{ memory.owner }}
+                                                </el-button>
+                                            </div>
+                                            <div style="display: flex;">
+                                                <el-button @click="authModal = memory?.psd || []" type="primary"
+                                                    style="font-weight: bold;" link>
+                                                    <v-icon name="gi-padlock-open"></v-icon>
+                                                </el-button>
+                                            </div>
                                         </el-space>
                                     </div>
                                 </template>
-                                <el-row :gutter="6">
+                                <el-row :gutter="6"
+                                    :style="{ filter: authedKey.includes(memory?.psd?.[1]) ? 'blur(5px)' : 'none' }">
                                     <el-col :span="24">
                                         <el-text style="margin: 16px 0;" class="mx-1" size="large">
-                                            {{ memory.content }}
+                                            {{ authedKey.includes(memory?.psd?.[1]) ? memory?.content : Array.from({
+                length: memory?.content?.length || 10
+            }).fill("▇").join(' ') }}
                                         </el-text>
                                     </el-col>
                                 </el-row>
-                                <el-row style="padding-top: 16px;" :gutter="6" v-if="memory?.img?.length">
-                                    <el-col :span="6" v-for="( src, index ) in  memory?.img ">
-                                        <el-image :preview-src-list="memory?.img" :src="src" :zoom-rate="1.2"
-                                            :max-scale="7" :min-scale="0.2" :initial-index="4" fit="cover" />
+                                <el-row :gutter="6" v-if="memory?.img?.length"
+                                    :style="{ filter: authedKey.includes(memory?.psd?.[1]) ? 'blur(5px)' : 'none', 'padding-top': '16px' }">
+                                    <el-col :span="6" v-for="(  src, index  ) in   memory?.img  ">
+                                        <el-image :preview-src-list="memory?.img"
+                                            :src="authedKey.includes(memory?.psd?.[1]) ? src : '/img/avatar.jpg'"
+                                            :zoom-rate="1.2" :max-scale="7" :min-scale="0.2" :initial-index="4"
+                                            fit="cover" />
                                     </el-col>
                                 </el-row>
-
                                 <template #footer>
                                     <div class="card-header">
                                         <el-text class="mx-1" type="info" size="large">
@@ -43,6 +73,7 @@
                                     </div>
                                 </template>
                             </el-card>
+
                             <el-divider>
                                 <v-icon fill="rgb(156, 205, 255)" name="bi-postcard-heart-fill" animation="pulse" />
                             </el-divider>
@@ -68,6 +99,10 @@ import { ElMessage, ElMessageBox } from 'element-plus'
 import { useThemeLocaleData } from "../composables";
 const themeLocale = useThemeLocaleData();
 const audioRef = ref(null)
+const authModal = ref([])
+const psdInput = ref(null)
+//已经校验过的值
+const authedKey = ref([])
 const frontmatter = usePageFrontmatter<GungnirThemeLinksPageFrontmatter>();
 const pageInfo = computed(() => {
     const info = (
@@ -79,8 +114,14 @@ const pageInfo = computed(() => {
     return info;
 });
 
-const toggleMusic = (done: () => void) => {
+const toggleMusic = () => {
     (audioRef.value as any).play()
+}
+const onAuth = (input: any) => {
+    //输入值和密码相等时
+    if (authModal?.[1] == input) {
+        authedKey.value.push(input)
+    }
 }
 document.body.addEventListener('click', function () {
     // 在此处编写滚动时需要执行的代码
