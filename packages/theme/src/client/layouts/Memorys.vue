@@ -46,21 +46,21 @@
                                         </el-space>
                                     </div>
                                 </template>
-                                <el-row :gutter="6"
-                                    :style="{ filter: authedKey.includes(memory?.psd?.[1]) ? 'blur(5px)' : 'none' }">
+                                <el-row :gutter="6">
                                     <el-col :span="24">
                                         <el-text style="margin: 16px 0;" class="mx-1" size="large">
-                                            {{ authedKey.includes(memory?.psd?.[1]) ? memory?.content : Array.from({
-                length: memory?.content?.length || 10
-            }).fill("▇").join(' ') }}
+                                            {{ (!memory?.psd?.length || authedKey.includes(memory?.psd?.[1])) ?
+                memory?.content :
+                Array.from({
+                    length: memory?.content?.length || 10
+                }).fill("▇").join(' ') }}
                                         </el-text>
                                     </el-col>
                                 </el-row>
-                                <el-row :gutter="6" v-if="memory?.img?.length"
-                                    :style="{ filter: authedKey.includes(memory?.psd?.[1]) ? 'blur(5px)' : 'none', 'padding-top': '16px' }">
+                                <el-row :gutter="6" v-if="memory?.img?.length" :style="{ 'padding-top': '16px' }">
                                     <el-col :span="6" v-for="(  src, index  ) in   memory?.img  ">
                                         <el-image :preview-src-list="memory?.img"
-                                            :src="authedKey.includes(memory?.psd?.[1]) ? src : '/img/avatar.jpg'"
+                                            :src="(!memory?.psd?.length || authedKey.includes(memory?.psd?.[1])) ? src : '/img/avatar.jpg'"
                                             :zoom-rate="1.2" :max-scale="7" :min-scale="0.2" :initial-index="4"
                                             fit="cover" />
                                     </el-col>
