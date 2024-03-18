@@ -2,18 +2,19 @@
     <Common>
         <template #page>
             <el-card shadow="always" :style="{
-                display: authModal?.length ? undefined : 'none', position: 'absolute',
+                display: authModal?.length ? undefined : 'none', position: 'fixed',
                 top: '50%',
                 left: '50%',
                 'max-width': '480px',
                 transform: 'translate(-50%, -50%)',
-                'z-index': 2
+                'z-index': 99
             }" title="权限校验">
                 <div>
-                    <el-input v-model="psdInput" @change="onAuth" style="width: 240px" placeholder="请校验">
+                    <el-input v-model="psdInput" @change="(value) => onAuth(value)" style="width: 240px"
+                        placeholder="请校验">
                         <template #prepend>{{ authModal?.[0] || '请校验身份' }}</template>
                     </el-input>
-                    <el-button type="danger" @click="authModal = []">取消</el-button>
+                    <el-button style="margin-left: 16px;" type="danger" @click="authModal = []">取消</el-button>
                 </div>
             </el-card>
 
@@ -39,7 +40,8 @@
                                             </div>
                                             <div style="display: flex;">
                                                 <el-button @click="authModal = memory?.psd || []" type="primary"
-                                                    style="font-weight: bold;" link>
+                                                    :style="{ 'font-weight': 'bold', display: (!memory?.psd?.length || authedKey.includes(memory?.psd?.[1])) ? 'none' : undefined }"
+                                                    link>
                                                     <v-icon name="gi-padlock-open"></v-icon>
                                                 </el-button>
                                             </div>
@@ -119,8 +121,9 @@ const toggleMusic = () => {
 }
 const onAuth = (input: any) => {
     //输入值和密码相等时
-    if (authModal?.[1] == input) {
+    if (authModal?.value?.[1] == input) {
         authedKey.value.push(input)
+        authModal.value = []
     }
 }
 document.body.addEventListener('click', function () {
