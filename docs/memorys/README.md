@@ -2,6 +2,79 @@
 layout: Memorys
 title: Memorys
 memorys:
+  - date: "2024-03-18"
+    memory:
+      - title: 
+        time: "13:18:04"
+        avatar: /img/avatar.jpg
+        content: "很可惜我不是那个人。"
+        weather: 
+        tem: 
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+
+  - date: "2024-03-17"
+    memory:
+      - title: 
+        time: "16:10:34"
+        avatar: /img/avatar.jpg
+        content: "其实想给你拍个照的，做个纪念，因为我想见完面应该就是永别了。可是呢，如果我这么做的话会让你讨厌的吧，哪来的怪人，奇葩……可是预感到了即将来到的再见，感受着渐远的距离，我又能够做什么呢，我什么都做不了。就想我永远无法开口，永远只能把你留在记忆里一样。"
+        weather: 
+        tem: 
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+          - 她的名字
+          - 王董
+        img:
+
+  - date: "2024-03-16"
+    memory:
+      - title: 
+        time: "14:27:26"
+        avatar: /img/avatar.jpg
+        content: "走着走着突然有种奇怪的感觉，仿佛回到了熟悉的地方。森林公园？我想起高三返校时和老贾顺路去图书馆的的那个下午，离开图书馆路过了什么公园在里面转了转，我坐在椅子上告诉他我偷偷带了手机过来，给他吃我带的橘子他死活不吃。如果这里是那个我不记得名字的公园，那么泗阳县图书馆一定就在这个公园的旁边……算了算高三到现在也七年了，我再次坐在这里也找不到记忆中的地方了，一切都变了，不同的是我不会再忘记这个我们曾经来过的地方了。"
+        weather: 
+        tem: 
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+          - http://124.223.165.180/api/static/images/9ba661bb0795302accde136d4588041f.jpeg
+  - date: "2024-03-15"
+    memory:
+      - title: 
+        time: "20:59:43"
+        avatar: /img/avatar.jpg
+        content: "婷居然上线了！神奇，四五年突然想起qq密码了？？"
+        weather: 
+        tem: 
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+
   - date: "2024-03-13"
     memory:
       - title: 
@@ -15,6 +88,8 @@ memorys:
         location:
           - 南京市
           - 雨花台区
+        psd:
+
         img:
           - http://124.223.165.180/api/static/images/bfeecf84da3df8eb2f6d4a4c2a9db255.png
   - date: "2024-03-11"
@@ -30,6 +105,8 @@ memorys:
         location:
           - 南京市
           - 雨花台区
+        psd:
+
         img:
 
   - date: "2024-03-09"
@@ -46,6 +123,8 @@ memorys:
         location:
           - 南京市
           - 雨花台区
+        psd:
+
         img:
 
       - title: 
@@ -59,6 +138,8 @@ memorys:
         location:
           - 南京市
           - 雨花台区
+        psd:
+
         img:
 
   - date: "2024-03-08"
@@ -82,6 +163,8 @@ memorys:
         location:
           - 南京市
           - 雨花台区
+        psd:
+
         img:
 
   - date: "2024-03-07"
@@ -97,6 +180,8 @@ memorys:
         location:
           - 南京市
           - 雨花台区
+        psd:
+
         img:
           - http://124.223.165.180/api/static/images/c2d2dc0354c7de33388d80ea47ef3190.jpeg
       - title: 
@@ -110,6 +195,8 @@ memorys:
         location:
           - 南京市
           - 雨花台区
+        psd:
+
         img:
           - http://124.223.165.180/api/static/images/a7e13df7539400c9b224c1bf010e7b80.jpeg
   - date: "2024-03-06"
@@ -125,6 +212,8 @@ memorys:
         location:
           - 南京市
           - 雨花台区
+        psd:
+
         img:
           - http://124.223.165.180/api/static/images/34eb2f3eec764175f0ad6cd4b747378d.jpeg
       - title: 
@@ -138,6 +227,8 @@ memorys:
         location:
           - 南京市
           - 雨花台区
+        psd:
+
         img:
 
   - date: "2024-03-05"
@@ -153,4 +244,6 @@ memorys:
         location:
           - 北京市
           - 西城区
+        psd:
+
         img:
