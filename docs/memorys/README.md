@@ -11,7 +11,7 @@ memorys:
         weather: 晴
         tem: 22℃
         desc: 
-        owner: 
+        owner: Align
         location:
           - 江苏省
           - 南京市
