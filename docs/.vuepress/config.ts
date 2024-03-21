@@ -211,7 +211,7 @@ export default defineUserConfig({
     // },
 
     footer: `
-      &copy; <a href="https://github.com/Ms-Align" target="_blank">Align</a> 2024-2024
+      &copy; <a href="https://github.com/Ms-Align" target="_blank">Align</a> 2024-2025
       <br>
       Powered by <a href="https://v2.vuepress.vuejs.org" target="_blank">VuePress</a>
     `,
