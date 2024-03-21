@@ -37,6 +37,10 @@
                                                 <el-button type="primary" style="font-weight: bold;" link>
                                                     {{ memory.owner }}
                                                 </el-button>
+                                                <el-tag type="primary"
+                                                    :style="{ 'margin-left': '16px', display: (memory?.tem || memory?.weather) ? undefined : 'none' }">
+                                                    {{ (memory.weather || '') + '•' + (memory.tem || '') }}
+                                                </el-tag>
                                             </div>
                                             <div style="display: flex;">
                                                 <el-button @click="authModal = memory?.psd || []" type="primary"
@@ -70,9 +74,17 @@
                                 </el-row>
                                 <template #footer>
                                     <div class="card-header">
-                                        <el-text class="mx-1" type="info" size="large">
+                                        <el-button type="info" link>
+                                            <v-icon name="md-avtimer-twotone">
+                                            </v-icon>
                                             {{ memory.time }}
-                                        </el-text>
+                                        </el-button>
+                                        <el-button type="info" link>
+                                            <v-icon name="co-location-pin">
+                                            </v-icon>
+                                            {{ memory.location?.join(' • ')
+                                            }}
+                                        </el-button>
                                     </div>
                                 </template>
                             </el-card>
