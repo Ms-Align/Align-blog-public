@@ -2,6 +2,23 @@
 layout: Memorys
 title: Memorys
 memorys:
+  - date: "2024-03-21"
+    memory:
+      - title: 
+        time: "13:45:12"
+        avatar: /img/avatar.jpg
+        content: "天气越来越暖了"
+        weather: 晴
+        tem: 22℃
+        desc: 
+        owner: 
+        location:
+          - 江苏省
+          - 南京市
+        psd:
+
+        img:
+
   - date: "2024-03-18"
     memory:
       - title: 
