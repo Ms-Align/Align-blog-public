@@ -54,8 +54,9 @@
                                 </template>
                                 <el-row :gutter="6">
                                     <el-col :span="24">
-                                        <el-text v-for="(text, i) in memory?.content?.split('\n')"
-                                            style="margin: 16px 0;" class="mx-1" size="large">
+                                        <el-text style="display: inline-block;"
+                                            v-for="(text, i) in memory?.content?.split(' ')" style="margin: 16px 0;"
+                                            class="mx-1" size="large">
                                             {{ (!memory?.psd?.length || authedKey.includes(memory?.psd?.[1])) ?
                 text :
                 Array.from({
@@ -140,6 +141,7 @@ const onAuth = (input: any) => {
         authModal.value = []
     }
 }
+console.log(2120, frontmatter?.memorys)
 document.body.addEventListener('click', function () {
     // 在此处编写滚动时需要执行的代码
     toggleMusic()
