@@ -54,11 +54,12 @@
                                 </template>
                                 <el-row :gutter="6">
                                     <el-col :span="24">
-                                        <el-text style="margin: 16px 0;" class="mx-1" size="large">
+                                        <el-text v-for="(text, i) in memory?.content?.split('\n')"
+                                            style="margin: 16px 0;" class="mx-1" size="large">
                                             {{ (!memory?.psd?.length || authedKey.includes(memory?.psd?.[1])) ?
-                memory?.content :
+                text :
                 Array.from({
-                    length: memory?.content?.length || 10
+                    length: text?.length || 10
                 }).fill("▇").join(' ') }}
                                         </el-text>
                                     </el-col>

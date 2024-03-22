@@ -101,10 +101,10 @@ import type { GungnirThemeI18n } from "../../shared";
   toggleSidebar: "切换侧边栏",
 
   // other pages
-  pageText: {
-    tags: "标签",
-    links: "链接",
-    memorys:"记忆"
+    pageText: {
+    tags: "Tags",
+    links: "Links",
+    memorys:"Memorys"
   },
 
   // "show all tags" button
