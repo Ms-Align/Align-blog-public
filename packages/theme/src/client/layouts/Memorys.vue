@@ -54,9 +54,8 @@
                                 </template>
                                 <el-row :gutter="6">
                                     <el-col :span="24">
-                                        <el-text style="display: inline-block;"
-                                            v-for="(text, i) in memory?.content?.split(' ')" style="margin: 16px 0;"
-                                            class="mx-1" size="large">
+                                        <el-text v-for="(text, i) in memory?.content?.split(' ')"
+                                            style="margin: 4px 0;display: inline-block;" class="mx-1" size="large">
                                             {{ (!memory?.psd?.length || authedKey.includes(memory?.psd?.[1])) ?
                 text :
                 Array.from({
