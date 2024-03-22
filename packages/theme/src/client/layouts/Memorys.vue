@@ -83,8 +83,7 @@
                                         <el-button type="info" link>
                                             <v-icon name="co-location-pin">
                                             </v-icon>
-                                            {{ memory.location?.join(' • ')
-                                            }}
+                                            {{ memory.location?.join(' • ')}}
                                         </el-button>
                                     </div>
                                 </template>
@@ -140,7 +139,6 @@ const onAuth = (input: any) => {
         authModal.value = []
     }
 }
-console.log(2120, frontmatter?.memorys)
 document.body.addEventListener('click', function () {
     // 在此处编写滚动时需要执行的代码
     toggleMusic()
