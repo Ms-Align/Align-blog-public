@@ -2,6 +2,23 @@
 layout: Memorys
 title: Memorys
 memorys:
+  - date: "2024-03-25"
+    memory:
+      - title: 
+        time: "11:30:30"
+        avatar: /img/avatar.jpg
+        content: "想想好久没写正式文章了，每天尽在这发Memorys了。抽空稍微写下这个博客的架构吧，里面有些我感觉有点意思的实施细节，虽然博客本身是个很简单的项目。"
+        weather: 阴
+        tem: 13℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 南京市
+        psd:
+
+        img:
+          - /img/memorys/fe69c8fd205af7e5da85ef74e683f510.png
   - date: "2024-03-24"
     memory:
       - title: 
