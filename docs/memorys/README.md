@@ -18,7 +18,7 @@ memorys:
         psd:
 
         img:
-          - /img/memorys/fe69c8fd205af7e5da85ef74e683f510.png
+          - /img/memorys/568af1001a19e68889e093c563f9f3bd.png
   - date: "2024-03-24"
     memory:
       - title: 
