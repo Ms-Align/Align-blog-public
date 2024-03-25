@@ -19,8 +19,7 @@
             </el-card>
 
             <PageHeader :page-info="pageInfo" />
-            <audio loop="true" preload="auto" ref="audioRef" autoplay="true"
-                src="https://124.223.165.180/api/static/musics/376db03817986dd1bae7f5f206340fb9.mpeg">
+            <audio loop="true" preload="auto" ref="audioRef" autoplay="true" src="/audio/musics/飞向遥远的天空.mpeg">
             </audio>
             <div class="tags-wrapper">
                 <el-timeline>
