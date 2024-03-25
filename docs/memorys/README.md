@@ -2,15 +2,33 @@
 layout: Memorys
 title: Memorys
 memorys:
+  - date: "2024-03-24"
+    memory:
+      - title: 
+        time: "16:41:02"
+        avatar: /img/avatar.jpg
+        content: "这绝对是来捣乱的这是"
+        weather: 阴
+        tem: 15℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 宿迁市
+          - 泗阳县
+        psd:
+
+        img:
+          - /img/memorys/fa1fb1db8a761d14c786f2db9496fd25.jpeg
   - date: "2024-03-22"
     memory:
       - title: 
         time: "16:46:23"
         avatar: /img/avatar.jpg
         content: "午睡刚醒愣神的功夫翻看博客的开发文档，无意点开了开源作者自己的博客网站。作者最近的文章还是2022年二月份的时候发的年度回顾，看样子大佬也不是一直有灵感和激情（笑）。
-托福，美国，寥寥扫了一眼我就已经能感受到自己和别人的差距了哈哈，人家已经到美国发展了，很符合我对大佬的想象。我随意的翻了翻，顶部的About导航点进去是她的英文简介，看着作者的照片我愣了一会，我想这如果不是她自己的话，谁会没事把别的女孩的照片放在自己简历上呢。我花了一点时间接受她是个女孩的事实，心里有种奇怪的感觉。我从来不关心开源作者的信息，或许因为人家名字的缘故，我一直以为她是个大叔哈哈。
+‘托福’，‘美国’，寥寥扫了一眼我就已经能感受到自己和别人的差距了哈哈，人家已经到美国发展了，很符合我对大佬的想象。我随意的翻了翻，顶部的About导航点进去是她的英文简介，看着作者的照片我愣了一会，我想这如果不是她自己的话，谁会没事把别的女孩的照片放在自己简历上呢。我花了一点时间接受她是个女孩的事实，心里有种奇怪的感觉。我从来不关心开源作者的信息，或许因为人家名字的缘故，我一直以为她是个大叔哈哈。
 所以我顿时来了兴趣，看了下她的github，她的开源项目，摸鱼应用，游戏风格简历，这些都是与工作无关的东西，然而却孜孜不倦的更新着。我想她应该是个富有激情的人，不善社交—毕竟她自己说目标是成为一个善良的人，就先从成为一个正常的人做起。很奇怪，不知道这种好感来自哪里，那些文字倒像是我会写出来的东西，我仿佛看到了另一个自己，如果我成绩好的话，上个好大学，考研，出国或许那会是另一个我。我这人很反感幻想，意淫，但是我当时确实走神了。不过如果真的能那样的话，我想我还是会感到孤独迷茫，一个人的内心是不会骗人的，没人知道自己真正需要什么，直到你遇见他。
-邹笑寒开篇说反正博客也没人看无所谓，我想我不是第一个看到这篇博客的人，还是有人会关注你的。你的能力，成就，付出，你的可爱，有人关注你的，有人会看到。"
+邹笑寒说反正写的博客也没人看无所谓，我想我不是第一个看到这篇博客的人，还是有人会关注你的。你的能力，成就，付出，你的可爱，有人关注你的，有人会看到。"
         weather: 晴
         tem: 26℃
         desc: 
@@ -76,7 +94,7 @@ memorys:
           - 她的名字
           - 王董，，，，
         img:
-          - http://124.223.165.180/api/static/images/4ba4e599577145f7a6b89f7884ec31e0.jpeg
+          - /img/memorys/4ba4e599577145f7a6b89f7884ec31e0.jpeg
   - date: "2024-03-16"
     memory:
       - title: 
@@ -96,7 +114,7 @@ memorys:
         psd:
 
         img:
-          - http://124.223.165.180/api/static/images/9ba661bb0795302accde136d4588041f.jpeg
+          - /img/memorys/9ba661bb0795302accde136d4588041f.jpeg
   - date: "2024-03-15"
     memory:
       - title: 
@@ -131,7 +149,7 @@ memorys:
         psd:
 
         img:
-          - http://124.223.165.180/api/static/images/bfeecf84da3df8eb2f6d4a4c2a9db255.png
+          - /img/memorys/bfeecf84da3df8eb2f6d4a4c2a9db255.png
   - date: "2024-03-11"
     memory:
       - title: 
@@ -226,7 +244,7 @@ memorys:
         psd:
 
         img:
-          - http://124.223.165.180/api/static/images/c2d2dc0354c7de33388d80ea47ef3190.jpeg
+          - /img/memorys/c2d2dc0354c7de33388d80ea47ef3190.jpeg
       - title: 
         time: "08:19:59"
         avatar: /img/avatar.jpg
@@ -241,7 +259,7 @@ memorys:
         psd:
 
         img:
-          - http://124.223.165.180/api/static/images/a7e13df7539400c9b224c1bf010e7b80.jpeg
+          - /img/memorys/a7e13df7539400c9b224c1bf010e7b80.jpeg
   - date: "2024-03-06"
     memory:
       - title: 
@@ -258,7 +276,7 @@ memorys:
         psd:
 
         img:
-          - http://124.223.165.180/api/static/images/34eb2f3eec764175f0ad6cd4b747378d.jpeg
+          - /img/memorys/34eb2f3eec764175f0ad6cd4b747378d.jpeg
       - title: 
         time: "15:22:27"
         avatar: /img/avatar.jpg
