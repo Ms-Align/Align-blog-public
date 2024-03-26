@@ -2,6 +2,61 @@
 layout: Memorys
 title: Memorys
 memorys:
+  - date: "2024-03-27"
+    memory:
+      - title: 
+        time: "00:30:49"
+        avatar: /img/avatar.jpg
+        content: " "
+        weather: 
+        tem: -℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+          - /img/memorys/f74f730f364ba87f5455becb8173df64.jpeg
+          - /img/memorys/335af7dfb549d5cd26171acaebcc1da1.jpeg
+          - /img/memorys/43923f8d6290312dc82f357cccb631e1.jpeg
+          - /img/memorys/a8f4ceaa02125a1ccc9badd711a65882.jpeg
+          - /img/memorys/77188099b8da68d6a8eaf0555971dada.jpeg
+  - date: "2024-03-26"
+    memory:
+      - title: 
+        time: "22:26:12"
+        avatar: /img/avatar.jpg
+        content: "感谢蔡总的饭局，祝前程似锦哈哈(第一次喝这么多白的哈哈)"
+        weather: 
+        tem: -℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+          - /img/memorys/e386ab8ac23689b5e9caa2add25e02d5.jpeg
+      - title: 
+        time: "16:55:08"
+        avatar: /img/avatar.jpg
+        content: "感谢蔡总送的巧克力瑞幸(果然还是第一口最好喝哈哈)"
+        weather: 多云
+        tem: 15℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 南京市
+        psd:
+
+        img:
+          - /img/memorys/178138cb3f5f099300150acc78e0d2b7.jpeg
   - date: "2024-03-25"
     memory:
       - title: 
