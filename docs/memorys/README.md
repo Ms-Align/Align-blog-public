@@ -7,9 +7,9 @@ memorys:
       - title: 
         time: "00:30:49"
         avatar: /img/avatar.jpg
-        content: " "
-        weather: 
-        tem: -℃
+        content: "早就说一起唱歌的嗷。可算被我逮到机会了"
+        weather: 阵雨
+        tem: 12℃
         desc: 
         owner: Align
         location:
@@ -19,11 +19,8 @@ memorys:
         psd:
 
         img:
-          - /img/memorys/f74f730f364ba87f5455becb8173df64.jpeg
-          - /img/memorys/335af7dfb549d5cd26171acaebcc1da1.jpeg
-          - /img/memorys/43923f8d6290312dc82f357cccb631e1.jpeg
-          - /img/memorys/a8f4ceaa02125a1ccc9badd711a65882.jpeg
-          - /img/memorys/77188099b8da68d6a8eaf0555971dada.jpeg
+          - /img/memorys/f871a6e17836f39c0baa2ecac01412f1.jpeg
+          - /img/memorys/7b23caef125e5b6a2f3b2b2786743154.jpeg
   - date: "2024-03-26"
     memory:
       - title: 
