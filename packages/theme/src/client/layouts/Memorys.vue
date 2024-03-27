@@ -9,7 +9,7 @@
                 transform: 'translate(-50%, -50%)',
                 'z-index': 99
             }" title="权限校验">
-                <div>
+                <div style="display: flex;">
                     <el-input v-model="psdInput" @change="(value) => onAuth(value)" style="width: 240px"
                         placeholder="请校验">
                         <template #prepend>{{ authModal?.[0] || '请校验身份' }}</template>
@@ -22,7 +22,7 @@
             <audio loop="true" preload="auto" ref="audioRef" autoplay="true" src="/audio/musics/飞向遥远的天空.mpeg">
             </audio>
             <div class="tags-wrapper">
-                <el-timeline>
+                <el-timeline :style="{ 'padding': isMobile() ? 0 : undefined }">
                     <el-timeline-item type='primary' hollow
                         v-for="(   record, index   ) in (frontmatter?.memorys || [])" :timestamp="record?.date"
                         placement="top">
@@ -65,9 +65,9 @@
                                 </el-row>
                                 <el-row :gutter="6" v-if="memory?.img?.length" :style="{ 'padding-top': '16px' }">
                                     <el-col :span="6" v-for="(  src, index  ) in   memory?.img  ">
-                                        <el-image
-                                            :preview-src-list="(!memory?.psd?.length || authedKey.includes(memory?.psd?.[1])) ? memory?.img : ['/img/avatar.jpg']"
-                                            :src="(!memory?.psd?.length || authedKey.includes(memory?.psd?.[1])) ? src : '/img/avatar.jpg'"
+                                        <el-image style="max-height: 100px;"
+                                            :preview-src-list="(!memory?.psd?.length || authedKey.includes(memory?.psd?.[1])) ? [src] : ['/img/avatar.jpg']"
+                                            :src="(!memory?.psd?.length || authedKey.includes(memory?.psd?.[1])) ? src : '/ img/avatar.jpg'"
                                             :zoom-rate="1.2" :max-scale="7" :min-scale="0.2" :initial-index="4"
                                             fit="cover" />
                                     </el-col>
@@ -137,6 +137,9 @@ const onAuth = (input: any) => {
         authedKey.value.push(input)
         authModal.value = []
     }
+}
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 document.body.addEventListener('click', function () {
     // 在此处编写滚动时需要执行的代码
