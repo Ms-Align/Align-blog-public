@@ -42,7 +42,7 @@
             <div style="font-weight: 400;line-height: 24px;font-size: 18px;margin-right: 16px;">
               菜单按钮
             </div>
-            <el-button @clicl="onNeverShowTour" size="small" style="color: rgba(99, 176, 255);">不再提示</el-button>
+            <el-button @click="onNeverShowTour" size="small" style="color: rgba(99, 176, 255);">不再提示</el-button>
           </div>
 
         </template>
@@ -110,6 +110,7 @@ const onTourClose = () => {
 }
 const onNeverShowTour = () => {
   localStorage.setItem('align-tour', JSON.stringify(['/']))
+  tourOpen.value = false
 }
 const scrollToTop = () => {
   window.scrollTo({
