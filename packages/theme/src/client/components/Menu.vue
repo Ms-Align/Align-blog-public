@@ -35,8 +35,18 @@
         <ToggleSidebarButton class="menu-btn-child menu-btn-sidebar" @toggle="$emit('toggle-sidebar')" />
       </div>
     </div>
-    <el-tour placement="top" v-model="tourOpen" type="primary" @close="onTourClose" :mask="true">
-      <el-tour-step target=".menu-btn" title="菜单按钮" description="点击展开右侧悬浮按钮可以展开菜单执行更多操作。" />
+    <el-tour placement="top" v-model="tourOpen" @close="onTourClose" :mask="true">
+      <el-tour-step target=".menu-btn" description="点击展开右侧悬浮按钮可以展开菜单执行更多操作。">
+        <template #header>
+          <div style="display: flex; align-items: center">
+            <div style="font-weight: 400;line-height: 24px;font-size: 18px;margin-right: 16px;">
+              菜单按钮
+            </div>
+            <el-button @clicl="onNeverShowTour" size="small" style="color: rgba(99, 176, 255);">不再提示</el-button>
+          </div>
+
+        </template>
+      </el-tour-step>
     </el-tour>
   </div>
 </template>
@@ -84,14 +94,13 @@ onMounted(() => {
     state.borderLen = 3.1415926 * (percent || 0) + "% 314.15926%";
   };
 
-  if (!(JSON.parse(localStorage.getItem('align-tour') || '[]') as Array<any>)?.includes('/')) {
+  if (!(JSON.parse(localStorage.getItem('align-tour') || '[]') as Array<any>)?.includes('/') && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     tourOpen.value = true
   }
   watch(y, handleScroll);
 });
 
 const toggleMenu = () => {
-  tourOpen.value = true
   state.isMenuOpen = !state.isMenuOpen;
 };
 
@@ -99,7 +108,9 @@ const onTourClose = () => {
   MenuButton.value.click()
   tourOpen.value = false
 }
-
+const onNeverShowTour = () => {
+  localStorage.setItem('align-tour', JSON.stringify(['/']))
+}
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
