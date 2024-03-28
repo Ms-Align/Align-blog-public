@@ -35,7 +35,7 @@
         <ToggleSidebarButton class="menu-btn-child menu-btn-sidebar" @toggle="$emit('toggle-sidebar')" />
       </div>
     </div>
-    <el-tour placement="top" v-model="tourOpen" @close="onTourClose" :mask="true">
+    <!-- <el-tour placement="top" v-model="tourOpen" @close="onTourClose" :mask="true">
       <el-tour-step target=".menu-btn" description="点击展开右侧悬浮按钮可以展开菜单执行更多操作。">
         <template #header>
           <div style="display: flex; align-items: center">
@@ -46,8 +46,8 @@
           </div>
 
         </template>
-      </el-tour-step>
-    </el-tour>
+</el-tour-step>
+</el-tour> -->
   </div>
 </template>
 
