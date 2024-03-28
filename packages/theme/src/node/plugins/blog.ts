@@ -43,6 +43,7 @@ export const getBlogPlugin = (
   localeOptions: GungnirThemeData,
   options?: GungnirThemeBlogPluginOptions
 ): Plugin | [] => {
+  //@ts-ignore
   if (options === false) return [];
 
   const blogOptions = {

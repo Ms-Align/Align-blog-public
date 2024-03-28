@@ -136,6 +136,7 @@ export const SearchPage = defineComponent({
                 autocomplete: "off",
                 spellcheck: false,
                 value: query.value,
+                //@ts-ignore
                 onInput: (event) => (query.value = event.target.value),
                 onKeydown: (event) => {
                   switch (event.key) {
