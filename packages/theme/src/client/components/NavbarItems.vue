@@ -144,7 +144,7 @@ const frontmatter = usePageFrontmatter<GungnirThemePageFrontmatter>();
 const isDocPage = computed(() => {
   // Show language switcher only on docs page
   const router = useRouter();
-  const path = router.currentRoute.value.path;
+  const path = router?.currentRoute?.value?.path;
   return (
     frontmatter.value.layout === undefined &&
     path.indexOf("/page/") === -1 &&

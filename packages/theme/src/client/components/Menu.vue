@@ -1,7 +1,7 @@
 <template>
   <div class="menu-btn-container" :class="{ open: state.isMenuOpen }">
     <div class="menu-btn-wrapper">
-      <div class="menu-btn" @click="toggleMenu">
+      <div ref="MenuButton" class="menu-btn" @click="toggleMenu">
         <div v-show="state.isBtnIconVisible" class="menu-btn-icon">
           <span />
           <span />
@@ -13,21 +13,12 @@
         </div>
 
         <svg class="menu-progress">
-          <circle
-            class="menu-border"
-            cx="50%"
-            cy="50%"
-            r="48%"
-            :style="{ 'stroke-dasharray': state.borderLen }"
-          />
+          <circle class="menu-border" cx="50%" cy="50%" r="48%" :style="{ 'stroke-dasharray': state.borderLen }" />
         </svg>
       </div>
 
       <div class="menu-btn-child-wrapper">
-        <ToggleColorModeButton
-          v-if="themeLocale.colorModeSwitch"
-          class="menu-btn-child"
-        />
+        <ToggleColorModeButton v-if="themeLocale.colorModeSwitch" class="menu-btn-child menu-btn-color" />
 
         <div class="menu-btn-child" @click="scrollToBottom">
           <VIcon name="fa-chevron-down" />
@@ -37,20 +28,16 @@
           <VIcon name="fa-chevron-up" />
         </div>
 
-        <div
-          v-if="isShowTocButton"
-          class="menu-btn-child menu-toc-btn"
-          @click="$emit('toggle-catalog')"
-        >
+        <div v-if="isShowTocButton" class="menu-btn-child menu-toc-btn" @click="$emit('toggle-catalog')">
           <VIcon name="fa-list-ul" />
         </div>
 
-        <ToggleSidebarButton
-          class="menu-btn-child menu-btn-sidebar"
-          @toggle="$emit('toggle-sidebar')"
-        />
+        <ToggleSidebarButton class="menu-btn-child menu-btn-sidebar" @toggle="$emit('toggle-sidebar')" />
       </div>
     </div>
+    <el-tour placement="top" v-model="tourOpen" type="primary" @close="onTourClose" :mask="true">
+      <el-tour-step target=".menu-btn" title="菜单按钮" description="点击展开右侧悬浮按钮可以展开菜单执行更多操作。" />
+    </el-tour>
   </div>
 </template>
 
@@ -58,7 +45,7 @@
 import ToggleColorModeButton from "@theme/ToggleColorModeButton.vue";
 import ToggleSidebarButton from "@theme/ToggleSidebarButton.vue";
 import { useScroll, useWindowSize } from "@vueuse/core";
-import { onMounted, reactive, watch } from "vue";
+import { onMounted, reactive, watch, ref } from "vue";
 import { useCatalog, useThemeLocaleData } from "../composables";
 
 defineEmits(["toggle-sidebar", "toggle-catalog"]);
@@ -72,7 +59,8 @@ const state = reactive({
   menuText: "0",
   borderLen: "0% 314.15926%"
 });
-
+const tourOpen = ref<boolean>(false)
+const MenuButton = ref()
 onMounted(() => {
   const { y } = useScroll(document);
   const windowH = useWindowSize().height;
@@ -96,12 +84,21 @@ onMounted(() => {
     state.borderLen = 3.1415926 * (percent || 0) + "% 314.15926%";
   };
 
+  if (!(JSON.parse(localStorage.getItem('align-tour') || '[]') as Array<any>)?.includes('/')) {
+    tourOpen.value = true
+  }
   watch(y, handleScroll);
 });
 
 const toggleMenu = () => {
+  tourOpen.value = true
   state.isMenuOpen = !state.isMenuOpen;
 };
+
+const onTourClose = () => {
+  MenuButton.value.click()
+  tourOpen.value = false
+}
 
 const scrollToTop = () => {
   window.scrollTo({
