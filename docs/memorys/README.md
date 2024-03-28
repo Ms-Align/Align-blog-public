@@ -5,6 +5,21 @@ memorys:
   - date: "2024-03-27"
     memory:
       - title: 
+        time: "16:54:24"
+        avatar: /img/avatar.jpg
+        content: "时间在帮我冲淡那种感觉，我能清楚的感受到。"
+        weather: 雨
+        tem: 11℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 南京市
+        psd:
+
+        img:
+
+      - title: 
         time: "00:30:49"
         avatar: /img/avatar.jpg
         content: "早就说一起唱歌的嗷。可算被我逮到机会了"
