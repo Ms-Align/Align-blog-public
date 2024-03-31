@@ -2,6 +2,83 @@
 layout: Memorys
 title: Memorys
 memorys:
+  - date: "2024-03-31"
+    memory:
+      - title: 
+        time: "18:43:12"
+        avatar: /img/avatar.jpg
+        content: "托乐嘉的杨掌柜炒肉豪华双人餐。
+青菜炒豆筋，西红柿炒鸡蛋和小炒肉。
+不得不说菜还是比较新鲜的，炒菜油用的菜籽油我比较吃惊，因为印象中能接受菜籽油味的人不多哈哈。小炒肉确实不错，之前已经吃过几次了。得吐槽的就是米饭了，小份9块钱，也就两碗多点这样。"
+        weather: 
+        tem: -℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 南京市
+          - 江宁区
+        psd:
+
+        img:
+          - /img/memorys/23e04a54b5fd39c324f1dff989448ea8.jpeg
+          - /img/memorys/43b1b864ebab79256df05d5c5ae1fe47.jpeg
+          - /img/memorys/b523490c803453a3de497a2f342710ba.jpeg
+          - /img/memorys/fce40e5722aafa8ae195354b8876afd4.jpeg
+  - date: "2024-03-30"
+    memory:
+      - title: 
+        time: "18:12:30"
+        avatar: /img/avatar.jpg
+        content: "回想上次来夫子庙还是在上次，游完泳来逛还真是有点累。"
+        weather: 
+        tem: -℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 南京市
+          - 秦淮区
+        psd:
+
+        img:
+          - /img/memorys/8000256818b41b5acc97513ca068dfe3.jpeg
+          - /img/memorys/327f334a2c8a38ccb395652659fe1435.jpeg
+          - /img/memorys/c9bac8c6353bb4c4447e726b8144bba4.jpeg
+          - /img/memorys/a51c79a8e5906b8b548195eb5e1e376c.jpeg
+          - /img/memorys/75a9124844954fa7f9273a7660feb5b6.jpeg
+  - date: "2024-03-29"
+    memory:
+      - title: 
+        time: "17:06:42"
+        avatar: /img/avatar.jpg
+        content: "作为开发者的小号，我要好好的测试功能。"
+        weather: 晴
+        tem: 27℃
+        desc: 
+        owner: 梦亦同趋
+        location:
+          - 江苏省
+          - 南京市
+        psd:
+
+        img:
+          - /img/memorys/d19d52bbd6651ccb7bec22767226f143.jpeg
+      - title: 
+        time: "15:22:16"
+        avatar: /img/avatar.jpg
+        content: "今天是真滴热。多好的下午，我却在上班。"
+        weather: 晴
+        tem: 27℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 南京市
+        psd:
+
+        img:
+
   - date: "2024-03-27"
     memory:
       - title: 
