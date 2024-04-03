@@ -2,6 +2,43 @@
 layout: Memorys
 title: Memorys
 memorys:
+  - date: "2024-04-03"
+    memory:
+      - title: 
+        time: "09:53:29"
+        avatar: /img/avatar.jpg
+        content: "怎么有这么可爱的女生呦！"
+        weather: 阴
+        tem: 14℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 南京市
+        psd:
+          - 加密喽
+          - qqqwww
+        img:
+          - /img/memorys/c78f471db220b4eac2c98b973cd1e873.jpeg
+          - /img/memorys/804173d7657578d0d2047f44860b1338.jpeg
+          - /img/memorys/fa7c335a4c16e0dc05a5d1014d9bb3ac.jpeg
+  - date: "2024-04-01"
+    memory:
+      - title: 
+        time: "22:18:37"
+        avatar: /img/avatar.jpg
+        content: "天气预报明天下暴雨，希望别堵车吧"
+        weather: 暴雨
+        tem: 20℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 南京市
+        psd:
+
+        img:
+          - /img/memorys/ec9d6172cb561545fafbaf16d5a9aa84.jpeg
   - date: "2024-03-31"
     memory:
       - title: 
@@ -30,8 +67,8 @@ memorys:
         time: "18:12:30"
         avatar: /img/avatar.jpg
         content: "回想上次来夫子庙还是在上次，游完泳来逛还真是有点累。"
-        weather: 
-        tem: -℃
+        weather: 晴
+        tem: 28℃
         desc: 
         owner: Align
         location:
