@@ -2,6 +2,80 @@
 layout: Memorys
 title: Memorys
 memorys:
+  - date: "2024-04-09"
+    memory:
+      - title: 
+        time: "10:58:06"
+        avatar: /img/avatar.jpg
+        content: "没错呢，你说的没错，我真是这么想的。"
+        weather: 晴
+        tem: 21℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 南京市
+        psd:
+          - 加密中
+          - 1231
+        img:
+          - /img/memorys/5a45b6ef70c6b1ece5a1567e879950b6.png
+  - date: "2024-04-08"
+    memory:
+      - title: 
+        time: "13:49:53"
+        avatar: /img/avatar.jpg
+        content: "想了会难受还不如不想"
+        weather: 阴
+        tem: 15℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+
+  - date: "2024-04-05"
+    memory:
+      - title: 
+        time: "00:37:34"
+        avatar: /img/avatar.jpg
+        content: "我能感受到，它在麻痹我的神经，我的感官。我变得木讷了，只不过这次是因为酒精，但我的心里，那个人一直在那里，我知道，她会一直指引着我，我也想，成为那个人。"
+        weather: 
+        tem: -℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 宿迁市
+          - 泗阳县
+        psd:
+          - 已加密
+          - 2120
+        img:
+
+  - date: "2024-04-04"
+    memory:
+      - title: 
+        time: "23:45:18"
+        avatar: /img/avatar.jpg
+        content: "谢谢你们，下次争取三瓶"
+        weather: 
+        tem: -℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 宿迁市
+          - 泗阳县
+        psd:
+
+        img:
+          - /img/memorys/2f9e242a60cc6e89666507985d227c1b.jpeg
+          - /img/memorys/40845c0d4b793c5030b3582d5def346e.jpeg
   - date: "2024-04-03"
     memory:
       - title: 
