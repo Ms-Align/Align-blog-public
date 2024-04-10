@@ -2,6 +2,7 @@ import { viteBundler } from "@vuepress/bundler-vite";
 import { webpackBundler } from "@vuepress/bundler-webpack";
 import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { defineUserConfig } from "vuepress";
+import giscusPlugin from "vuepress-plugin-giscus";
 import { gungnirTheme, i18n } from "vuepress-theme-gungnir";
 import { navbar, sidebar } from "./configs";
 
@@ -224,6 +225,18 @@ export default defineUserConfig({
   },
 
   plugins: [
+    giscusPlugin({
+      repo: "Ms-Align/Align-discussions",
+      repoId: "R_kgDOLsMRVA",
+      category: "Announcements",
+      categoryId: "DIC_kwDOLsMRVM4CeliV",
+      mapping: "pathname",
+      reactionsEnabled: true,
+      theme: "preferred_color_scheme",
+      lang: "zh-CN",
+      lazyLoad: true,
+      crossorigin: "anonymous",
+    }),
     docsearchPlugin({
       appId: "3DDLGP0IG4",
       apiKey: "6556adaa82b31485309b440a525f264a",
