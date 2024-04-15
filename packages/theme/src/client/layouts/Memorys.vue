@@ -60,7 +60,7 @@
                             closable :disable-transitions="false" @close="handleClose(tag)">
                             {{ tag.label  }}
                         </el-tag>
-                        <el-tree-select @change="handleInputConfirm" v-if="inputVisible" :data="options" v-model="formInline" clearable>
+                        <el-tree-select placeholder='选择条件' @change="handleInputConfirm" v-if="inputVisible" :data="options" v-model="formInline" clearable>
                                 </el-tree-select>
                         <el-button v-else class="button-new-tag" size="small" @click="showInput">
                             + 添加条件
