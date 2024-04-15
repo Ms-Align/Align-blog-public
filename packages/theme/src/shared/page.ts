@@ -61,6 +61,7 @@ interface LinkGroup {
 }
 interface Memory {
   content?:string
+  zIndex?:number//权重，影响置顶
   desc?:string 
   img?:[] //配图
   time?:string //时刻
@@ -72,7 +73,7 @@ interface Memory {
   location?:string //地点
   [key:string]:any
 }
-interface MemoryGroup {
+export interface MemoryGroup {
   date:string //日期(不精确到人)
   memory:Array<Memory>
 }

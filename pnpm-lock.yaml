@@ -252,7 +252,8 @@ importers:
       '@vuepress/shared': 2.0.0-beta.49
       '@vuepress/utils': 2.0.0-beta.49
       '@vueuse/core': ^8.9.4
-      element-plus: ^2.5.5
+      dayjs: ^1.11.10
+      element-plus: ^2.7.0
       oh-vue-icons: ^1.0.0-rc3
       sass: ^1.52.3
       vue: ^3.2.36
@@ -286,7 +287,8 @@ importers:
       '@vuepress/shared': 2.0.0-beta.49
       '@vuepress/utils': 2.0.0-beta.49
       '@vueuse/core': 8.9.4_vue@3.4.21
-      element-plus: 2.6.2_vue@3.4.21
+      dayjs: 1.11.10
+      element-plus: 2.7.0_vue@3.4.21
       oh-vue-icons: 1.0.0-rc3_vue@3.4.21
       sass: 1.72.0
       vue: 3.4.21
@@ -2558,7 +2560,7 @@ packages:
       vite: ^2.5.10
       vue: ^3.2.25
     dependencies:
-      vite: 2.9.18
+      vite: 2.9.18_sass@1.72.0
       vue: 3.4.21
     dev: false
 
@@ -4971,8 +4973,8 @@ packages:
     resolution: {integrity: sha512-6Fmg8QkkumNOwuZ/5mIbMU9WI3H2fmn5ajcVya64I5Yr5CcNmO7vcLt0Y7c96DCiMO5/9G+4sI2r6eEvdg1F7A==}
     dev: false
 
-  /element-plus/2.6.2_vue@3.4.21:
-    resolution: {integrity: sha512-WFMv1v83l437Xu+GeeM+ytxd9VUQpR4418BowvTVIPYItsoj6yK0ITIuSv19iCesF405FbAOaCIHXhJch0ilFA==}
+  /element-plus/2.7.0_vue@3.4.21:
+    resolution: {integrity: sha512-WAiaFLavuWFxof9qwkC27jvkh9nRcNnB506g1vvJSiVaVqjCBWUFCIyJKeN11M1qcv2cS5VV5PfSLjTIkrw87A==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
