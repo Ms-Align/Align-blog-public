@@ -21,7 +21,53 @@
             <PageHeader :page-info="pageInfo" />
             <audio loop="true" preload="auto" ref="audioRef" autoplay="true" src="/audio/musics/飞向遥远的天空.mpeg">
             </audio>
+            <!-- <div class="sorter-wrapper">
+                <el-form :model="formInline" class="demo-form-inline">
+                    <el-form-item label="发布时间">
+                        <el-select v-model="formInline.TIME" clearable>
+                            <el-option label="由近及远" value="desc" />
+                            <el-option label="由远及近" value="asc" />
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item label="内容字数">
+                        <el-select v-model="formInline.WORDS" clearable>
+                            <el-option label="由多到少" value="desc" />
+                            <el-option label="由少到多" value="asc" />
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item label="是否权限校验">
+                        <el-select v-model="formInline.AUTH" clearable>
+                            <el-option label="无需校验" :value="false" />
+                            <el-option label="需要校验" :value="true" />
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item label="发布者">
+                        <el-select v-model="formInline.USER" clearable>
+                            <el-option label="Align" value="Align" />
+                            <el-option label="梦亦同趋" value="梦亦同趋" />
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item>
+                        <el-button type="primary" @click="onSubmit">查询</el-button>
+                    </el-form-item>
+                </el-form>
+            </div> -->
             <div class="tags-wrapper">
+                <div class="link-section" style="padding-bottom: 16px;margin: 0 24px;width:100%">
+                    <h2>添加过滤条件</h2>
+                    <div style="margin-left: 16px;display:flex;align-items:center">
+                        <el-tag effect="dark" style="margin: 0 8px;" round v-for="tag in dynamicTags" :key="tag.value"
+                            closable :disable-transitions="false" @close="handleClose(tag)">
+                            {{ tag.label  }}
+                        </el-tag>
+                        <el-tree-select @change="handleInputConfirm" v-if="inputVisible" :data="options" v-model="formInline" clearable>
+                                </el-tree-select>
+                        <el-button v-else class="button-new-tag" size="small" @click="showInput">
+                            + 添加条件
+                        </el-button>
+                    </div>
+                </div>
+
                 <el-timeline :style="{ 'padding': isMobile() ? 0 : undefined }">
                     <el-timeline-item type='primary' hollow
                         v-for="(   record, index   ) in (frontmatter?.memorys || [])" :timestamp="record?.date"
@@ -104,10 +150,12 @@ import Common from "@theme/Common.vue";
 import PageHeader from "@theme/PageHeader.vue";
 import { usePageFrontmatter } from "@vuepress/client";
 //import { TK } from '../../../public/tk';
-import { computed, ref, onMounted } from "vue";
+import * as dayjs from 'dayjs'
+import { computed, ref, onMounted, reactive, nextTick,watchEffect } from "vue";
 import type {
     GungnirThemeLinksPageFrontmatter,
-    GungnirThemePageOptions
+    GungnirThemePageOptions,
+    MemoryGroup
 } from "../../shared";
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { useThemeLocaleData } from "../composables";
@@ -117,6 +165,146 @@ const authModal = ref([])
 const psdInput = ref(null)
 //已经校验过的值
 const authedKey = ref([])
+const inputValue = ref('')
+const dynamicTags = ref<any[]>([])
+const inputVisible = ref(false)
+const InputRef = ref()
+const options = [
+                {
+                    value: 'TIME',
+                    label: '发布时间',
+                    children: [
+                        {
+                            value: 'TIME_desc_时间：由近及远',
+                            label: '由近及远',
+                        },{
+                            value: 'TIME_asc_时间：由远及近',
+                            label: '由远及近',
+                        },
+                    ],
+                },
+                {
+                    value: 'WORDS',
+                    label: '内容字数',
+                    children: [
+                        {
+                            value: 'WORDS_desc_内容字数：由多及少',
+                            label: '由多及少',
+                        },{
+                            value: 'WORDS_asc_内容字数：由少及多',
+                            label: '由少及多',
+                        },
+                    ],
+                },
+            ]
+const handleClose = (tag: string) => {
+    dynamicTags.value.splice(dynamicTags.value.indexOf(tag), 1)
+}
+type FilterRule = 'TIME' | "WORDS" | "USER" | "AUTH"
+type FilterType = "asc" | "desc" | "none"
+interface FilterResultStackItem {
+    rule?: FilterRule
+    type?: FilterType
+    source: MemoryGroup[]
+    result?: MemoryGroup[]
+}
+class FilterMemoryBy {
+    filterResultStack: Array<FilterResultStackItem> = []
+
+    get current(): FilterResultStackItem {
+        return this.filterResultStack.slice(-1)?.[0]
+    }
+    constructor(memorys: MemoryGroup[]) {
+        this.filterResultStack.push({ source: memorys })
+    }
+
+    filter(rule: FilterRule, type: FilterType = 'desc') {
+        const _source = this.current?.result || this.current?.source
+        this.filterResultStack.push({ source: _source, type, rule })
+        switch (rule) {
+            case 'TIME':
+                this.filterByTime()
+                break;
+            case 'WORDS':
+                this.filterByWords()
+                break;
+            case 'AUTH':
+                this.filterByAuth()
+                break;
+            case 'USER':
+                this.filterByUser()
+                break
+            default:
+                this.filterByTime()
+                break;
+        }
+        return JSON.parse(JSON.stringify(this.current?.result || '[]'))
+
+    }
+
+    //按时间顺序排序
+    filterByTime() {
+        let _source = JSON.parse(JSON.stringify(this.current?.result || this.current?.source || '[]')), _type = this.current?.type
+        if (_type == 'asc') {
+            _source.forEach(element => {
+                element.memory = element.memory?.sort((a, b) => { return dayjs(a.time).isBefore(dayjs(b?.time)) ? -1 : 1 })
+            });
+            _source = _source?.sort((a, b) => { return dayjs(a.date).isBefore(dayjs(b?.date)) ? -1 : 1 })
+        } else {
+            _source.forEach(element => {
+                element.memory = element.memory?.sort((a, b) => { return dayjs(a.time).isBefore(dayjs(b?.time)) ? 1 : -1 })
+            });
+            _source = _source?.sort((a, b) => { return dayjs(a.date).isBefore(dayjs(b?.date)) ? 1 : -1 })
+        }
+        this.current.result = _source
+    }
+    //按字数顺序排序
+    filterByWords() {
+        let _source = JSON.parse(JSON.stringify(this.current?.result || this.current?.source || '[]')), _type = this.current?.type
+        let source: any = [];
+        if (_type == 'asc') {
+            //将每个memory抽离成一个单独的group
+            _source.forEach(item => {
+                item?.memory?.forEach((memory) => {
+                    source.push({
+                        ...item,
+                        memory: [memory]
+                    })
+                })
+            })
+            //按字数多少排序
+            this.current.result = source.sort((a, b) => {
+                return a.memory?.[0]?.content?.length - b.memory?.[0]?.content?.length
+            })
+        } else {
+            //将每个memory抽离成一个单独的group
+            _source.forEach(item => {
+                item?.memory?.forEach((memory) => {
+                    source.push({
+                        ...item,
+                        memory: [memory]
+                    })
+                })
+            })
+            //按字数多少排序
+            this.current.result = source.sort((a, b) => {
+                return b.memory?.[0]?.content?.length - a.memory?.[0]?.content?.length
+            })
+        }
+    }
+    filterByAuth() {
+        let _source = JSON.parse(JSON.stringify(this.current?.result || this.current?.source || '[]')), _type = this.current?.type
+        if (_type == 'none') {
+
+        }
+    }
+    filterByUser() {
+        let _source = JSON.parse(JSON.stringify(this.current?.result || this.current?.source || '[]')), _type = this.current?.type
+    }
+}
+const showInput = () => {
+    inputVisible.value = true
+}
 const frontmatter = usePageFrontmatter<GungnirThemeLinksPageFrontmatter>();
 const pageInfo = computed(() => {
     const info = (
@@ -127,6 +315,34 @@ const pageInfo = computed(() => {
     if (info.title === undefined) info.title = themeLocale.value.pageText?.memorys;
     return info;
 });
+const formInline = ref()
+watchEffect(()=>{
+    console.log(2120)
+    const filter = new FilterMemoryBy(frontmatter.value.memorys || [])
+    dynamicTags?.value.forEach(tag=>{
+        const [rule,type] = tag?.value?.split('_')
+        frontmatter.value.memorys = filter.filter(rule,type)
+    })
+    
+})
+const handleInputConfirm = (value) => {
+    inputVisible.value = false
+    dynamicTags.value=[...dynamicTags.value,{
+        label:value?.split('_')[2],
+        value
+    }]
+    nextTick(()=>{
+        formInline.value = undefined
+    })
+}
+// const filterTarget = ref('TIME')
+// const filterOptions = [{ label: '时间', value: "TIME" }, { label: '字数', value: "WORDS" },]
+
+
+// const onSubmit = () => {
+//     console.log('submit!')
+// }
+
 
 const toggleMusic = () => {
     (audioRef.value as any).play()
@@ -141,6 +357,8 @@ const onAuth = (input: any) => {
 function isMobile() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
+
+
 document.body.addEventListener('click', function () {
     // 在此处编写滚动时需要执行的代码
     toggleMusic()
@@ -155,3 +373,13 @@ document.body.addEventListener('click', function () {
 // })
 
 </script>
+
+<style scoped>
+.demo-form-inline .el-input {
+    --el-input-width: 220px;
+}
+
+.demo-form-inline .el-select {
+    --el-select-width: 220px;
+}
+</style>

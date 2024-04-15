@@ -1,5 +1,5 @@
-@import '../_variables';
-@import '../_mixins';
+@import "../_variables";
+@import "../_mixins";
 
 .article-tag {
   vertical-align: middle;
@@ -16,7 +16,7 @@
   cursor: pointer;
 
   &:not(.page-tag) {
-    @include transition(all .5s ease);
+    @include transition(all 0.5s ease);
   }
 
   > sup {
@@ -25,8 +25,11 @@
     display: inline-block;
   }
 
-  &.active, &.focus {
-    box-shadow: rgba(0, 0, 0, .117647) 0 1px 6px, rgba(0, 0, 0, .239216) 0 1px 4px;
+  &.active,
+  &.focus {
+    box-shadow:
+      rgba(0, 0, 0, 0.117647) 0 1px 6px,
+      rgba(0, 0, 0, 0.239216) 0 1px 4px;
   }
 
   &:hover:not(.tag-all),
@@ -54,6 +57,11 @@
   padding: 3.5rem 2.5rem 5rem;
 }
 
+.sorter-wrapper {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3.5rem 2.5rem 0rem;
+}
 .tags-wrapper section {
   margin-top: 30px;
 
@@ -71,7 +79,8 @@
     > a {
       color: var(--c-text);
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         text-decoration: none;
         color: var(--c-text-accent);
       }
