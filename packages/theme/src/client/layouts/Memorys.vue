@@ -70,7 +70,7 @@
 
                 <el-timeline :style="{ 'padding': isMobile() ? 0 : undefined }">
                     <el-timeline-item type='primary' hollow
-                        v-for="(   record, index   ) in (frontmatter?.memorys || [])" :timestamp="record?.date"
+                        v-for="(   record, index   ) in (MEMS || [])" :timestamp="record?.date"
                         placement="top">
                         <div v-for="(   memory, index   ) in record?.memory">
                             <el-card>
@@ -196,12 +196,51 @@ const options = [
                         },
                     ],
                 },
+                {
+                    value: 'USER',
+                    label: '发布者',
+                    children: [
+                        {
+                            value: 'USER_Align_发布者：Align',
+                            label: 'Align',
+                        },{
+                            value: 'USER_梦亦同趋_发布者：梦亦同趋',
+                            label: '梦亦同趋',
+                        },
+                    ],
+                },
+                {
+                    value: 'IMG',
+                    label: '是否有图片',
+                    children: [
+                        {
+                            value: 'IMG_true_有配图',
+                            label: '有图',
+                        },{
+                            value: 'IMG_false_无配图',
+                            label: '无图',
+                        },
+                    ],
+                },
+                {
+                    value: 'AUTH',
+                    label: '是否加密',
+                    children: [
+                        {
+                            value: 'AUTH_true_已加密',
+                            label: '加密',
+                        },{
+                            value: 'AUTH_false_未加密',
+                            label: '未加密',
+                        },
+                    ],
+                },
             ]
 const handleClose = (tag: string) => {
     dynamicTags.value.splice(dynamicTags.value.indexOf(tag), 1)
 }
-type FilterRule = 'TIME' | "WORDS" | "USER" | "AUTH"
-type FilterType = "asc" | "desc" | "none"
+type FilterRule = 'TIME' | "WORDS" | "USER" | "AUTH" | "IMG"
+type FilterType = "asc" | "desc" | true | false
 interface FilterResultStackItem {
     rule?: FilterRule
     type?: FilterType
@@ -233,6 +272,9 @@ class FilterMemoryBy {
                 break;
             case 'USER':
                 this.filterByUser()
+                break
+            case 'IMG':
+                this.filterByImg()
                 break
             default:
                 this.filterByTime()
@@ -294,12 +336,36 @@ class FilterMemoryBy {
     }
     filterByAuth() {
         let _source = JSON.parse(JSON.stringify(this.current?.result || this.current?.source || '[]')), _type = this.current?.type
-        if (_type == 'none') {
-
+        if (JSON.parse(_type)) {
+            _source.forEach(item => {
+                item.memory = item?.memory?.filter(memory=>memory?.psd?.length)
+            })
+        }else {
+            _source.forEach(item => {
+                item.memory = item?.memory?.filter(memory=>!memory?.psd?.length)
+            })
         }
+        this.current.result = _source?.filter(item=>item?.memory?.length)
     }
     filterByUser() {
         let _source = JSON.parse(JSON.stringify(this.current?.result || this.current?.source || '[]')), _type = this.current?.type
+        _source.forEach(item => {
+            item.memory = item?.memory?.filter(memory=>memory?.owner == _type)
+        })
+        this.current.result = _source?.filter(item=>item?.memory?.length)
+    }
+    filterByImg() {
+        let _source = JSON.parse(JSON.stringify(this.current?.result || this.current?.source || '[]')), _type = this.current?.type
+        if (JSON.parse(_type)) {
+            _source.forEach(item => {
+                item.memory = item?.memory?.filter(memory=>memory?.img?.length)
+            })
+        }else {
+            _source.forEach(item => {
+                item.memory = item?.memory?.filter(memory=>!memory?.img?.length)
+            })
+        }
+        this.current.result = _source?.filter(item=>item?.memory?.length)
     }
 }
 const showInput = () => {
@@ -316,19 +382,23 @@ const pageInfo = computed(() => {
     return info;
 });
 const formInline = ref()
+const MEMS = ref([])
+watchEffect(()=>{
+    MEMS.value = JSON.parse(JSON.stringify(frontmatter.value.memorys || '[]'))
+})
 watchEffect(()=>{
     const filter = new FilterMemoryBy(frontmatter.value.memorys || [])
-        dynamicTags?.value?.length ? dynamicTags?.value.forEach(tag=>{
-            const [rule,type] = tag?.value?.split('_')
-            frontmatter.value.memorys = filter.filter(rule,type)
-        }):frontmatter.value.memorys = filter.filter('TIME')
+    dynamicTags?.value?.length ? dynamicTags?.value?.forEach(tag=>{
+        const [rule,type] = tag?.value?.split('_')
+        MEMS.value = filter.filter(rule,type)
+    }):MEMS.value = filter.filter('TIME')
 })
 const handleInputConfirm = (value) => {
     inputVisible.value = false
-    dynamicTags.value=[...dynamicTags.value,{
+    dynamicTags.value.push({
         label:value?.split('_')[2],
         value
-    }]
+    })
     nextTick(()=>{
         formInline.value = undefined
     })
