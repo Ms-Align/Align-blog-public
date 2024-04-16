@@ -53,10 +53,10 @@
                 </el-form>
             </div> -->
             <div class="tags-wrapper">
-                <div class="link-section" style="padding-bottom: 16px;margin: 0 24px;width:100%">
-                    <h2>添加过滤条件</h2>
-                    <div style="margin-left: 16px;display:flex;align-items:center">
-                        <el-tag effect="dark" style="margin: 0 8px;" round v-for="tag in dynamicTags" :key="tag.value"
+                <div class="link-section" :style="{'padding-bottom': '16px','margin': isMobile()?'0 -12px':'0 24px','width':'100%'}">
+                    <h2>过滤条件</h2>
+                    <div style="margin-left: 16px;display:flex;align-items:center;flex-wrap: wrap">
+                        <el-tag effect="dark" style="margin: 2px 8px;" round v-for="tag in dynamicTags" :key="tag.value"
                             closable :disable-transitions="false" @close="handleClose(tag)">
                             {{ tag.label  }}
                         </el-tag>
@@ -317,13 +317,11 @@ const pageInfo = computed(() => {
 });
 const formInline = ref()
 watchEffect(()=>{
-    console.log(2120)
     const filter = new FilterMemoryBy(frontmatter.value.memorys || [])
-    dynamicTags?.value.forEach(tag=>{
-        const [rule,type] = tag?.value?.split('_')
-        frontmatter.value.memorys = filter.filter(rule,type)
-    })
-    
+        dynamicTags?.value?.length ? dynamicTags?.value.forEach(tag=>{
+            const [rule,type] = tag?.value?.split('_')
+            frontmatter.value.memorys = filter.filter(rule,type)
+        }):frontmatter.value.memorys = filter.filter('TIME')
 })
 const handleInputConfirm = (value) => {
     inputVisible.value = false
