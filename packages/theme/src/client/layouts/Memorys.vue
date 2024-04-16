@@ -150,7 +150,7 @@ import Common from "@theme/Common.vue";
 import PageHeader from "@theme/PageHeader.vue";
 import { usePageFrontmatter } from "@vuepress/client";
 //import { TK } from '../../../public/tk';
-import * as dayjs from 'dayjs'
+import dayjs from 'dayjs'
 import { computed, ref, onMounted, reactive, nextTick,watchEffect } from "vue";
 import type {
     GungnirThemeLinksPageFrontmatter,
