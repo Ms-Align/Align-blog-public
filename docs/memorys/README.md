@@ -2,6 +2,149 @@
 layout: Memorys
 title: Memorys
 memorys:
+  - date: "2024-04-21"
+    memory:
+      - title: 
+        time: "14:00:28"
+        avatar: /img/avatar.jpg
+        content: "i want it and i did it"
+        weather: 多云
+        tem: 21℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 南京市
+        psd:
+
+        img:
+
+      - title: 
+        time: "03:14:33"
+        avatar: /img/avatar.jpg
+        content: "酒吧的天花板也很好看"
+        weather: 
+        tem: -℃
+        desc: 
+        owner: Align
+        location:
+          - null
+          - null
+        psd:
+
+        img:
+          - /img/memorys/3d73f809e263751eff66c2b898ee94d6.jpeg
+      - title: 
+        time: "02:53:18"
+        avatar: /img/avatar.jpg
+        content: "我清醒，我清醒"
+        weather: 
+        tem: -℃
+        desc: 
+        owner: Align
+        location:
+          - null
+          - null
+        psd:
+
+        img:
+          - /img/memorys/292404087c46fd629cd701afc5dadbec.jpeg
+  - date: "2024-04-20"
+    memory:
+      - title: 
+        time: "16:46:59"
+        avatar: /img/avatar.jpg
+        content: "常州特色恐龙单车和揽月湾观光塔(登塔门票30一人)"
+        weather: 
+        tem: -℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 常州市
+          - 武进区
+        psd:
+
+        img:
+          - /img/memorys/4142e11a68324915d0da6f541a13db3d.jpeg
+          - /img/memorys/fe0316b1ee79a43ab6a81f50273ec6e1.jpeg
+          - /img/memorys/13c5905a6d3b8c7601bbaca441e92ed4.jpeg
+          - /img/memorys/932883e70b9c04dcb3e068fa9e9f7286.jpeg
+      - title: 
+        time: "11:11:23"
+        avatar: /img/avatar.jpg
+        content: "，"
+        weather: 
+        tem: -℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 常州市
+          - 天宁区
+        psd:
+
+        img:
+          - /img/memorys/ea4468cbb5ac80341ce0690f7a7b3cae.jpeg
+          - /img/memorys/a114a7c0763422a4ea2216973cc5c4a5.jpeg
+          - /img/memorys/b232c5d2720ecfcbcca794c585f32ed0.jpeg
+      - title: 
+        time: "10:54:03"
+        avatar: /img/avatar.jpg
+        content: "这是红梅公园呢"
+        weather: 
+        tem: -℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 常州市
+          - 武进区
+        psd:
+
+        img:
+          - /img/memorys/8fa88a413c4165b2fe562037fc022d71.jpeg
+          - /img/memorys/7934188fd046b62cfed5f1e5773e15e4.jpeg
+          - /img/memorys/0c4411d41a78b58be4d7cd466848435c.jpeg
+          - /img/memorys/0bed3be56ac1573cfbee23981701c134.jpeg
+  - date: "2024-04-19"
+    memory:
+      - title: 
+        time: "19:14:50"
+        avatar: /img/avatar.jpg
+        content: "大雨，大雨"
+        weather: 
+        tem: -℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 南京市
+          - 江宁区
+        psd:
+
+        img:
+          - /img/memorys/aa9dbd1b6e9d114c21b50f573989e05f.jpeg
+  - date: "2024-04-16"
+    memory:
+      - title: 
+        time: "19:32:22"
+        avatar: /img/avatar.jpg
+        content: "宝贝专属座位和专属司机(开玩笑的别揍我别揍我)
+ps.这是4号拍的了，一直没心情发出来"
+        weather: 阴
+        tem: 23℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+          - /img/memorys/1a70e25cc4b07161316d9a506d815e63.jpeg
+          - /img/memorys/cf8a561495cced501055e6be77de6ca7.jpeg
   - date: "2024-04-15"
     memory:
       - title: 
