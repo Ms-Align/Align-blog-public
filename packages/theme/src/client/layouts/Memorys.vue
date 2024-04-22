@@ -53,15 +53,17 @@
                 </el-form>
             </div> -->
             <div class="tags-wrapper">
-                <div class="link-section" :style="{'padding-bottom': '16px','margin': isMobile()?'0 -12px':'0 24px','width':'100%'}">
+                <div class="link-section"
+                    :style="{ 'padding-bottom': '16px', 'margin': isMobile() ? '0 -12px' : '0 24px', 'width': '100%' }">
                     <h2>过滤条件</h2>
                     <div style="margin-left: 16px;display:flex;align-items:center;flex-wrap: wrap">
                         <el-tag effect="dark" style="margin: 2px 8px;" round v-for="tag in dynamicTags" :key="tag.value"
                             closable :disable-transitions="false" @close="handleClose(tag)">
-                            {{ tag.label  }}
+                            {{ tag.label }}
                         </el-tag>
-                        <el-tree-select placeholder='选择条件' @change="handleInputConfirm" v-if="inputVisible" :data="options" v-model="formInline" clearable>
-                                </el-tree-select>
+                        <el-tree-select placeholder='选择条件' @change="handleInputConfirm" v-if="inputVisible"
+                            :data="options" v-model="formInline" clearable>
+                        </el-tree-select>
                         <el-button v-else class="button-new-tag" size="small" @click="showInput">
                             + 添加条件
                         </el-button>
@@ -69,9 +71,8 @@
                 </div>
 
                 <el-timeline :style="{ 'padding': isMobile() ? 0 : undefined }">
-                    <el-timeline-item type='primary' hollow
-                        v-for="(   record, index   ) in (MEMS || [])" :timestamp="record?.date"
-                        placement="top">
+                    <el-timeline-item type='primary' hollow v-for="(   record, index   ) in (MEMS || [])"
+                        :timestamp="record?.date" placement="top">
                         <div v-for="(   memory, index   ) in record?.memory">
                             <el-card>
                                 <template #header>
@@ -151,7 +152,7 @@ import PageHeader from "@theme/PageHeader.vue";
 import { usePageFrontmatter } from "@vuepress/client";
 //import { TK } from '../../../public/tk';
 import dayjs from 'dayjs'
-import { computed, ref, onMounted, reactive, nextTick,watchEffect } from "vue";
+import { computed, ref, onMounted, reactive, nextTick, watchEffect } from "vue";
 import type {
     GungnirThemeLinksPageFrontmatter,
     GungnirThemePageOptions,
@@ -170,72 +171,72 @@ const dynamicTags = ref<any[]>([])
 const inputVisible = ref(false)
 const InputRef = ref()
 const options = [
-                {
-                    value: 'TIME',
-                    label: '发布时间',
-                    children: [
-                        {
-                            value: 'TIME_desc_时间：由近及远',
-                            label: '由近及远',
-                        },{
-                            value: 'TIME_asc_时间：由远及近',
-                            label: '由远及近',
-                        },
-                    ],
-                },
-                {
-                    value: 'WORDS',
-                    label: '内容字数',
-                    children: [
-                        {
-                            value: 'WORDS_desc_内容字数：由多及少',
-                            label: '由多及少',
-                        },{
-                            value: 'WORDS_asc_内容字数：由少及多',
-                            label: '由少及多',
-                        },
-                    ],
-                },
-                {
-                    value: 'USER',
-                    label: '发布者',
-                    children: [
-                        {
-                            value: 'USER_Align_发布者：Align',
-                            label: 'Align',
-                        },{
-                            value: 'USER_梦亦同趋_发布者：梦亦同趋',
-                            label: '梦亦同趋',
-                        },
-                    ],
-                },
-                {
-                    value: 'IMG',
-                    label: '是否有图片',
-                    children: [
-                        {
-                            value: 'IMG_true_有配图',
-                            label: '有图',
-                        },{
-                            value: 'IMG_false_无配图',
-                            label: '无图',
-                        },
-                    ],
-                },
-                {
-                    value: 'AUTH',
-                    label: '是否加密',
-                    children: [
-                        {
-                            value: 'AUTH_true_已加密',
-                            label: '加密',
-                        },{
-                            value: 'AUTH_false_未加密',
-                            label: '未加密',
-                        },
-                    ],
-                },
-            ]
+    {
+        value: 'TIME',
+        label: '发布时间',
+        children: [
+            {
+                value: 'TIME_desc_时间：由近及远',
+                label: '由近及远',
+            }, {
+                value: 'TIME_asc_时间：由远及近',
+                label: '由远及近',
+            },
+        ],
+    },
+    {
+        value: 'WORDS',
+        label: '内容字数',
+        children: [
+            {
+                value: 'WORDS_desc_内容字数：由多及少',
+                label: '由多及少',
+            }, {
+                value: 'WORDS_asc_内容字数：由少及多',
+                label: '由少及多',
+            },
+        ],
+    },
+    {
+        value: 'USER',
+        label: '发布者',
+        children: [
+            {
+                value: 'USER_Align_发布者：Align',
+                label: 'Align',
+            }, {
+                value: 'USER_梦亦同趋_发布者：梦亦同趋',
+                label: '梦亦同趋',
+            },
+        ],
+    },
+    {
+        value: 'IMG',
+        label: '是否有图片',
+        children: [
+            {
+                value: 'IMG_true_有配图',
+                label: '有图',
+            }, {
+                value: 'IMG_false_无配图',
+                label: '无图',
+            },
+        ],
+    },
+    {
+        value: 'AUTH',
+        label: '是否加密',
+        children: [
+            {
+                value: 'AUTH_true_已加密',
+                label: '加密',
+            }, {
+                value: 'AUTH_false_未加密',
+                label: '未加密',
+            },
+        ],
+    },
+]
 const handleClose = (tag: string) => {
     dynamicTags.value.splice(dynamicTags.value.indexOf(tag), 1)
 }
@@ -289,12 +290,12 @@ class FilterMemoryBy {
         let _source = JSON.parse(JSON.stringify(this.current?.result || this.current?.source || '[]')), _type = this.current?.type
         if (_type == 'asc') {
             _source.forEach(element => {
-                element.memory = element.memory?.sort((a, b) => { return dayjs(a.time).isBefore(dayjs(b?.time)) ? -1 : 1 })
+                element.memory = element.memory?.sort((a, b) => { return dayjs(element.date + ' ' + a.time).isBefore(dayjs(element.date + ' ' + b?.time)) ? -1 : 1 })
             });
             _source = _source?.sort((a, b) => { return dayjs(a.date).isBefore(dayjs(b?.date)) ? -1 : 1 })
         } else {
             _source.forEach(element => {
-                element.memory = element.memory?.sort((a, b) => { return dayjs(a.time).isBefore(dayjs(b?.time)) ? 1 : -1 })
+                element.memory = element.memory?.sort((a, b) => { return dayjs(element.date + ' ' + a.time).isBefore(dayjs(element.date + ' ' + b?.time)) ? 1 : -1 })
             });
             _source = _source?.sort((a, b) => { return dayjs(a.date).isBefore(dayjs(b?.date)) ? 1 : -1 })
         }
@@ -338,34 +339,34 @@ class FilterMemoryBy {
         let _source = JSON.parse(JSON.stringify(this.current?.result || this.current?.source || '[]')), _type = this.current?.type
         if (JSON.parse(_type)) {
             _source.forEach(item => {
-                item.memory = item?.memory?.filter(memory=>memory?.psd?.length)
+                item.memory = item?.memory?.filter(memory => memory?.psd?.length)
             })
-        }else {
+        } else {
             _source.forEach(item => {
-                item.memory = item?.memory?.filter(memory=>!memory?.psd?.length)
+                item.memory = item?.memory?.filter(memory => !memory?.psd?.length)
             })
         }
-        this.current.result = _source?.filter(item=>item?.memory?.length)
+        this.current.result = _source?.filter(item => item?.memory?.length)
     }
     filterByUser() {
         let _source = JSON.parse(JSON.stringify(this.current?.result || this.current?.source || '[]')), _type = this.current?.type
         _source.forEach(item => {
-            item.memory = item?.memory?.filter(memory=>memory?.owner == _type)
+            item.memory = item?.memory?.filter(memory => memory?.owner == _type)
         })
-        this.current.result = _source?.filter(item=>item?.memory?.length)
+        this.current.result = _source?.filter(item => item?.memory?.length)
     }
     filterByImg() {
         let _source = JSON.parse(JSON.stringify(this.current?.result || this.current?.source || '[]')), _type = this.current?.type
         if (JSON.parse(_type)) {
             _source.forEach(item => {
-                item.memory = item?.memory?.filter(memory=>memory?.img?.length)
+                item.memory = item?.memory?.filter(memory => memory?.img?.length)
             })
-        }else {
+        } else {
             _source.forEach(item => {
-                item.memory = item?.memory?.filter(memory=>!memory?.img?.length)
+                item.memory = item?.memory?.filter(memory => !memory?.img?.length)
             })
         }
-        this.current.result = _source?.filter(item=>item?.memory?.length)
+        this.current.result = _source?.filter(item => item?.memory?.length)
     }
 }
 const showInput = () => {
@@ -383,23 +384,23 @@ const pageInfo = computed(() => {
 });
 const formInline = ref()
 const MEMS = ref([])
-watchEffect(()=>{
+watchEffect(() => {
     MEMS.value = JSON.parse(JSON.stringify(frontmatter.value.memorys || '[]'))
 })
-watchEffect(()=>{
+watchEffect(() => {
     const filter = new FilterMemoryBy(frontmatter.value.memorys || [])
-    dynamicTags?.value?.length ? dynamicTags?.value?.forEach(tag=>{
-        const [rule,type] = tag?.value?.split('_')
-        MEMS.value = filter.filter(rule,type)
-    }):MEMS.value = filter.filter('TIME')
+    dynamicTags?.value?.length ? dynamicTags?.value?.forEach(tag => {
+        const [rule, type] = tag?.value?.split('_')
+        MEMS.value = filter.filter(rule, type)
+    }) : MEMS.value = filter.filter('TIME')
 })
 const handleInputConfirm = (value) => {
     inputVisible.value = false
     dynamicTags.value.push({
-        label:value?.split('_')[2],
+        label: value?.split('_')[2],
         value
     })
-    nextTick(()=>{
+    nextTick(() => {
         formInline.value = undefined
     })
 }
@@ -413,7 +414,7 @@ const handleInputConfirm = (value) => {
 
 
 const toggleMusic = () => {
-    (audioRef.value as any).play()
+    (audioRef.value as any)?.play()
 }
 const onAuth = (input: any) => {
     //输入值和密码相等时
