@@ -5,31 +5,17 @@ memorys:
   - date: "2024-04-21"
     memory:
       - title: 
-        time: "14:00:28"
+        time: "03:14:33"
         avatar: /img/avatar.jpg
-        content: "i want it and i did it"
-        weather: 多云
+        content: "酒吧的天花板也很好看"
+        weather: 晴
         tem: 21℃
         desc: 
         owner: Align
         location:
           - 江苏省
           - 南京市
-        psd:
-
-        img:
-
-      - title: 
-        time: "03:14:33"
-        avatar: /img/avatar.jpg
-        content: "酒吧的天花板也很好看"
-        weather: 
-        tem: -℃
-        desc: 
-        owner: Align
-        location:
-          - null
-          - null
+          - 江宁区
         psd:
 
         img:
@@ -38,13 +24,14 @@ memorys:
         time: "02:53:18"
         avatar: /img/avatar.jpg
         content: "我清醒，我清醒"
-        weather: 
-        tem: -℃
+        weather: 晴
+        tem: 21℃
         desc: 
         owner: Align
         location:
-          - null
-          - null
+          - 江苏省
+          - 南京市
+          - 江宁区
         psd:
 
         img:
@@ -280,8 +267,8 @@ Oh
           - 江苏省
           - 南京市
         psd:
-          - 加密中
-          - 1231
+          - 该知道的人会知道
+          - 王董
         img:
           - /img/memorys/5a45b6ef70c6b1ece5a1567e879950b6.png
   - date: "2024-04-08"
@@ -317,8 +304,8 @@ Oh
           - 宿迁市
           - 泗阳县
         psd:
-          - 已加密
-          - 2120
+          - 该知道的人会知道
+          - 王董
         img:
 
   - date: "2024-04-04"
@@ -354,8 +341,8 @@ Oh
           - 江苏省
           - 南京市
         psd:
-          - 加密喽
-          - qqqwww
+          - 该知道的人会知道
+          - 王董
         img:
           - /img/memorys/c78f471db220b4eac2c98b973cd1e873.jpeg
           - /img/memorys/804173d7657578d0d2047f44860b1338.jpeg
@@ -610,8 +597,7 @@ Oh
           - 南京市
           - 雨花台区
         psd:
-          - 嗯
-          - ，，，
+
         img:
 
   - date: "2024-03-17"
@@ -629,8 +615,8 @@ Oh
           - 南京市
           - 雨花台区
         psd:
-          - 名字
-          - 王董，，，，
+          - 该知道的人会知道
+          - 王董
         img:
           - /img/memorys/4ba4e599577145f7a6b89f7884ec31e0.jpeg
   - date: "2024-03-16"
@@ -668,8 +654,8 @@ Oh
           - 南京市
           - 雨花台区
         psd:
-          - 粉碎地方
-          - 2133
+          - 我在那天回家的路上发现你上线了
+          - 范文婷
         img:
 
   - date: "2024-03-13"
@@ -737,8 +723,8 @@ Oh
           - 南京市
           - 雨花台区
         psd:
-          - 结，，
-          - 王董，，，
+          - 该知道的人会知道
+          - 王董
         img:
 
   - date: "2024-03-08"
@@ -763,8 +749,8 @@ Oh
           - 南京市
           - 雨花台区
         psd:
-          - ？？？？
-          - 王董，。？
+          - 该知道的人会知道
+          - 王董
         img:
 
   - date: "2024-03-07"
