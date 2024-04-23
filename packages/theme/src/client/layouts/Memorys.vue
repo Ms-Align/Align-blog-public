@@ -100,7 +100,8 @@
                                 </template>
                                 <el-row :gutter="6">
                                     <el-col :span="24">
-                                        <el-text style="margin: 4px 0;display: block;" class="mx-1" size="large">
+                                        <el-text style="margin: 4px 0;display: block;white-space: pre-line;"
+                                            class="mx-1" size="large">
                                             {{ (!memory?.psd?.length || authedKey.includes(memory?.psd?.[1])) ?
                 memory.content :
                 Array.from({
@@ -372,6 +373,7 @@ const showInput = () => {
     inputVisible.value = true
 }
 const frontmatter = usePageFrontmatter<GungnirThemeLinksPageFrontmatter>();
+console.log(frontmatter)
 const pageInfo = computed(() => {
     const info = (
         themeLocale.value.pages && themeLocale.value.pages.memorys
