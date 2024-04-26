@@ -88,7 +88,7 @@ export default defineUserConfig({
     personalInfo: {
       name: "Align",
       avatar: "/img/avatar.jpg",
-      description: "二月爱凌, 梦亦同趋, Align...",
+      description: "你说青涩最搭初恋，像小雪落下海岸线",
       sns: {
         gitee: {
           icon: "si-gitee",
