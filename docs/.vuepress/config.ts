@@ -88,7 +88,7 @@ export default defineUserConfig({
     personalInfo: {
       name: "Align",
       avatar: "/img/avatar.jpg",
-      description: "你说青涩最搭初恋，像小雪落下海岸线",
+      description: "你说青涩最搭初恋，如小雪落下海岸线",
       sns: {
         gitee: {
           icon: "si-gitee",
