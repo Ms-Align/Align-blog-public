@@ -2,12 +2,132 @@
 layout: Memorys
 title: Memorys
 memorys:
+  - date: "2024-04-29"
+    memory:
+      - title: 
+        time: "17:02:31"
+        avatar: /img/avatar.jpg
+        content: "你说青涩最搭初恋
+
+如小雪落下海岸线
+
+第五个季节某一天上演
+
+我们有相遇的时间
+
+你说空瓶适合许愿
+
+在风暖月光的地点
+
+第十三月你就如期出现
+
+海之角也不再遥远
+
+你骄傲的飞远 我栖息的夏天
+
+听不见的宣言 重复过很多年
+
+北纬线的思念被季风吹远
+
+吹远默念的侧脸
+
+吹远鸣唱的诗篇
+
+你骄傲的飞远 我栖息的叶片
+
+去不同的世界 却从不曾告别
+
+沧海月的想念羽化我昨天
+
+在我成熟的笑脸
+
+你却未看过一眼
+
+你说空瓶适合许愿
+
+在风暖月光的地点
+
+第十三月你就如期出现
+
+海之角也不再遥远
+
+你骄傲的飞远 我栖息的夏天
+
+听不见的宣言 重复过很多年
+
+北纬线的思念被季风吹远
+
+吹远默念的侧脸
+
+吹远鸣唱的诗篇
+
+你骄傲的飞远 我栖息的叶片
+
+去不同的世界 却从不曾告别
+
+沧海月的想念羽化我昨天
+
+在我成熟的笑脸
+
+你却未看过一眼
+
+你骄傲的飞远 我栖息的夏天
+
+听不见的宣言 重复过很多年
+
+北纬线的思念被季风吹远
+
+吹远默念的侧脸
+
+吹远鸣唱的诗篇
+
+你骄傲的飞远 我栖息的叶片
+
+去不同的世界 却从不曾告别
+
+沧海月的想念羽化我昨天
+
+在我成熟的笑脸
+
+你却未看过一眼"
+        weather: 多云
+        tem: 22℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+
+  - date: "2024-04-28"
+    memory:
+      - title: 
+        time: "13:51:17"
+        avatar: /img/avatar.jpg
+        content: "飞鸟和蝉真好听"
+        weather: 阴
+        tem: 19℃
+        desc: 
+        owner: Align
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+          - /img/memorys/e9537c69650b403329eabd743b1f49ca.jpeg
   - date: "2024-04-23"
     memory:
       - title: 
         time: "15:24:12"
         avatar: /img/avatar.jpg
-        content: "这一个多月状态都超级差，目前没有好转的迹象。 i cant take it anymore, and i cant wait it anymore."
+        content: "这一个多月状态都超级差，目前没有好转的迹象。
+
+i cant take it anymore, and i cant wait it anymore."
         weather: 阴
         tem: 24℃
         desc: 
@@ -78,7 +198,7 @@ memorys:
       - title: 
         time: "11:11:23"
         avatar: /img/avatar.jpg
-        content: "，"
+        content: "平平无奇的照片喽"
         weather: 
         tem: -℃
         desc: 
@@ -86,7 +206,7 @@ memorys:
         location:
           - 江苏省
           - 常州市
-          - 天宁区
+          - 武进区
         psd:
 
         img:
