@@ -94,6 +94,13 @@
                                                     link>
                                                     <v-icon name="gi-padlock-open"></v-icon>
                                                 </el-button>
+                                                <el-button @click="() => { toggleMusic(memory?.music) }" type="primary"
+                                                    :style="{ 'font-weight': 'bold', display: !memory?.music ? 'none' : undefined }"
+                                                    link>
+                                                    <v-icon name="si-youtubemusic"></v-icon>
+                                                    <v-icon v-if="memory.music == audioRef.src"
+                                                        name="ri-pause-circle-fill"></v-icon>
+                                                </el-button>
                                             </div>
                                         </el-space>
                                     </div>
@@ -161,7 +168,7 @@ import type {
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { useThemeLocaleData } from "../composables";
 const themeLocale = useThemeLocaleData();
-const audioRef = ref(null)
+const audioRef = ref<any>(null)
 const authModal = ref([])
 const psdInput = ref(null)
 //已经校验过的值
@@ -413,7 +420,8 @@ const handleInputConfirm = (value) => {
 // }
 
 
-const toggleMusic = () => {
+const toggleMusic = (src: string) => {
+    audioRef.value.src = src;
     (audioRef.value as any)?.play()
 }
 const onAuth = (input: any) => {
@@ -428,10 +436,10 @@ function isMobile() {
 }
 
 
-document.body.addEventListener('click', function () {
-    // 在此处编写滚动时需要执行的代码
-    toggleMusic()
-});
+// document.body.addEventListener('click', function () {
+//     // 在此处编写滚动时需要执行的代码
+//     toggleMusic()
+// });
 // ElMessageBox.alert('我们为Memory提供了背景音乐，希望你喜欢。', 'Align', {
 //     // if you want to disable its autofocus
 //     // autofocus: false,
