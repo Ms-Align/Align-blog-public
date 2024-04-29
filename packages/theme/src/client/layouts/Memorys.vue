@@ -94,7 +94,7 @@
                                                     link>
                                                     <v-icon name="gi-padlock-open"></v-icon>
                                                 </el-button>
-                                                <el-button @click="() => { toggleMusic(memory?.music) }" type="primary"
+                                                <el-button @click="toggleMusic(memory?.music)" type="primary"
                                                     :style="{ 'font-weight': 'bold', display: !memory?.music ? 'none' : undefined }"
                                                     link>
                                                     <v-icon name="si-youtubemusic"></v-icon>
@@ -380,6 +380,7 @@ const showInput = () => {
     inputVisible.value = true
 }
 const frontmatter = usePageFrontmatter<GungnirThemeLinksPageFrontmatter>();
+console.log(frontmatter)
 const pageInfo = computed(() => {
     const info = (
         themeLocale.value.pages && themeLocale.value.pages.memorys
