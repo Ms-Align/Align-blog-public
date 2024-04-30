@@ -119,7 +119,7 @@
                                 </el-row>
                                 <el-row :gutter="6" v-if="memory?.img?.length" :style="{ 'padding-top': '16px' }">
                                     <el-col style="flex: none;" v-for="(  src, index  ) in   memory?.img  ">
-                                        <el-image style="height: 100px;width: 100px;"
+                                        <el-image lazy style="height: 100px;width: 100px;"
                                             :preview-src-list="(!memory?.psd?.length || authedKey.includes(memory?.psd?.[1])) ? [src] : ['/img/avatar.jpg']"
                                             :src="(!memory?.psd?.length || authedKey.includes(memory?.psd?.[1])) ? src : '/img/avatar.jpg'"
                                             :zoom-rate="1.2" :max-scale="7" :min-scale="0.2" :initial-index="4"
