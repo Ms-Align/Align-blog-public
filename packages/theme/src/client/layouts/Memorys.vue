@@ -231,6 +231,19 @@ const options = [
         ],
     },
     {
+        value: 'MUSIC',
+        label: '音频',
+        children: [
+            {
+                value: 'MUSIC_true_有配乐',
+                label: '有配乐',
+            }, {
+                value: 'MUSIC_false_无配乐',
+                label: '无配乐',
+            },
+        ],
+    },
+    {
         value: 'AUTH',
         label: '是否加密',
         children: [
@@ -247,7 +260,7 @@ const options = [
 const handleClose = (tag: string) => {
     dynamicTags.value.splice(dynamicTags.value.indexOf(tag), 1)
 }
-type FilterRule = 'TIME' | "WORDS" | "USER" | "AUTH" | "IMG"
+type FilterRule = 'TIME' | "WORDS" | "USER" | "AUTH" | "IMG" | "MUSIC"
 type FilterType = "asc" | "desc" | true | false
 interface FilterResultStackItem {
     rule?: FilterRule
@@ -283,6 +296,9 @@ class FilterMemoryBy {
                 break
             case 'IMG':
                 this.filterByImg()
+                break
+            case 'MUSIC':
+                this.filterByMusic()
                 break
             default:
                 this.filterByTime()
@@ -360,6 +376,19 @@ class FilterMemoryBy {
         _source.forEach(item => {
             item.memory = item?.memory?.filter(memory => memory?.owner == _type)
         })
+        this.current.result = _source?.filter(item => item?.memory?.length)
+    }
+    filterByMusic() {
+        let _source = JSON.parse(JSON.stringify(this.current?.result || this.current?.source || '[]')), _type = this.current?.type
+        if (JSON.parse(_type)) {
+            _source.forEach(item => {
+                item.memory = item?.memory?.filter(memory => memory?.music)
+            })
+        } else {
+            _source.forEach(item => {
+                item.memory = item?.memory?.filter(memory => !memory?.music)
+            })
+        }
         this.current.result = _source?.filter(item => item?.memory?.length)
     }
     filterByImg() {
