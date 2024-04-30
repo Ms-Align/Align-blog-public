@@ -7,7 +7,11 @@ memorys:
       - title: 
         time: "17:02:31"
         avatar: /img/avatar.jpg
-        content: "你说青涩最搭初恋
+        content: "任然 - 飞鸟和蝉
+
+
+
+你说青涩最搭初恋
 
 如小雪落下海岸线
 
@@ -94,7 +98,7 @@ memorys:
         tem: 22℃
         desc: 
         owner: Align
-        music: /audio/musics/937b8a00933587600f3ae8979a905c3d.mpeg
+        music: 0d19af0cb4f389981b4b82b7e7d8978b.mpeg
         location:
           - 江苏省
           - 南京市
@@ -113,7 +117,7 @@ memorys:
         tem: 19℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -134,7 +138,7 @@ i cant take it anymore, and i cant wait it anymore."
         tem: 24℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -153,7 +157,7 @@ i cant take it anymore, and i cant wait it anymore."
         tem: 21℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -170,7 +174,7 @@ i cant take it anymore, and i cant wait it anymore."
         tem: 21℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -189,7 +193,7 @@ i cant take it anymore, and i cant wait it anymore."
         tem: -℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 常州市
@@ -209,7 +213,7 @@ i cant take it anymore, and i cant wait it anymore."
         tem: -℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 常州市
@@ -228,7 +232,7 @@ i cant take it anymore, and i cant wait it anymore."
         tem: -℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 常州市
@@ -250,7 +254,7 @@ i cant take it anymore, and i cant wait it anymore."
         tem: -℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -271,7 +275,7 @@ ps.这是4号拍的了，一直没心情发出来"
         tem: 23℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -286,7 +290,11 @@ ps.这是4号拍的了，一直没心情发出来"
       - title: 
         time: "09:29:55"
         avatar: /img/avatar.jpg
-        content: "我听见雨滴落在青青草地
+        content: "小幸运 - 田馥甄
+
+
+
+我听见雨滴落在青青草地
 
 我听见远方下课钟声响起
 
@@ -391,7 +399,7 @@ Oh
         tem: 21℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: dd3c073775af690769963151fad4907e.mpeg
         location:
           - 江苏省
           - 南京市
@@ -410,7 +418,7 @@ Oh
         tem: 21℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -429,7 +437,7 @@ Oh
         tem: 16℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -447,7 +455,7 @@ Oh
         tem: 21℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -466,7 +474,7 @@ Oh
         tem: 21℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -485,7 +493,7 @@ Oh
         tem: 15℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -504,7 +512,7 @@ Oh
         tem: -℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 宿迁市
@@ -524,7 +532,7 @@ Oh
         tem: -℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 宿迁市
@@ -544,7 +552,7 @@ Oh
         tem: 14℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -565,7 +573,7 @@ Oh
         tem: 20℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -587,7 +595,7 @@ Oh
         tem: 20℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -608,7 +616,7 @@ Oh
         tem: 28℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -631,7 +639,7 @@ Oh
         tem: 27℃
         desc: 
         owner: 梦亦同趋
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -647,7 +655,7 @@ Oh
         tem: 27℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -665,7 +673,7 @@ Oh
         tem: 11℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -681,7 +689,7 @@ Oh
         tem: 12℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -701,7 +709,7 @@ Oh
         tem: -℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -718,7 +726,7 @@ Oh
         tem: 15℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -736,7 +744,7 @@ Oh
         tem: 13℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -754,7 +762,7 @@ Oh
         tem: 15℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 宿迁市
@@ -783,7 +791,7 @@ Oh
         tem: 26℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -802,7 +810,7 @@ Oh
         tem: 22℃
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -820,7 +828,7 @@ Oh
         tem: 
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -839,7 +847,7 @@ Oh
         tem: 
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -863,7 +871,7 @@ Oh
         tem: 
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 宿迁市
@@ -882,7 +890,7 @@ Oh
         tem: 
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 江苏省
           - 南京市
@@ -902,7 +910,7 @@ Oh
         tem: 
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 南京市
           - 雨花台区
@@ -920,7 +928,7 @@ Oh
         tem: 
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 南京市
           - 雨花台区
@@ -940,7 +948,7 @@ Oh
         tem: 
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 南京市
           - 雨花台区
@@ -957,7 +965,7 @@ Oh
         tem: 
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 南京市
           - 雨花台区
@@ -992,7 +1000,7 @@ Oh
         tem: 
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 南京市
           - 雨花台区
@@ -1011,7 +1019,7 @@ Oh
         tem: 
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 南京市
           - 雨花台区
@@ -1027,7 +1035,7 @@ Oh
         tem: 
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 南京市
           - 雨花台区
@@ -1045,7 +1053,7 @@ Oh
         tem: 
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 南京市
           - 雨花台区
@@ -1061,7 +1069,7 @@ Oh
         tem: 
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 南京市
           - 雨花台区
@@ -1079,7 +1087,7 @@ Oh
         tem: 
         desc: 
         owner: Align
-        music: /audio/musics/
+        music: 
         location:
           - 北京市
           - 西城区
