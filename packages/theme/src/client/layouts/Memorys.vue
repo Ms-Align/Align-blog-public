@@ -409,7 +409,6 @@ const showInput = () => {
     inputVisible.value = true
 }
 const frontmatter = usePageFrontmatter<GungnirThemeLinksPageFrontmatter>();
-console.log(frontmatter)
 const pageInfo = computed(() => {
     const info = (
         themeLocale.value.pages && themeLocale.value.pages.memorys
