@@ -34,6 +34,7 @@ import {
   GiPadlockOpen,
   RiPauseCircleFill,
   RiTimerLine,
+  MdStopcircleOutlined,
   BiPostcardHeartFill,
   RiWeiboFill,
   RiZhihuLine
@@ -79,6 +80,7 @@ addIcons(
   FaCircle,
   FaPencilAlt,
   FaRegularUser,
+  MdStopcircleOutlined,
   FaRegularCalendar,
   RiTimerLine,
   RiPauseCircleFill,

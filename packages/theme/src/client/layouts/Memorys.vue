@@ -98,8 +98,8 @@
                                                     :style="{ 'font-weight': 'bold', display: !memory?.music ? 'none' : undefined }"
                                                     link>
                                                     <v-icon name="si-youtubemusic"></v-icon>
-                                                    <v-icon v-if="memory.music == audioRef.src"
-                                                        name="ri-pause-circle-fill"></v-icon>
+                                                    <!-- <v-icon v-if="memory.music == audioRef.src"
+                                                        name="ri-pause-circle-fill"></v-icon> -->
                                                 </el-button>
                                             </div>
                                         </el-space>
@@ -432,8 +432,9 @@ const onAuth = (input: any) => {
         authModal.value = []
     }
 }
+const _window = window
 function isMobile() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(_window?.navigator?.userAgent);
 }
 
 
