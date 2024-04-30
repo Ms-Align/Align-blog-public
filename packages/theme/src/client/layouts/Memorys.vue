@@ -422,7 +422,7 @@ const handleInputConfirm = (value) => {
 
 
 const toggleMusic = (src: string) => {
-    audioRef.value.src = src;
+    audioRef.value.src = '/audio/musics/' + src;
     (audioRef.value as any)?.play()
 }
 const onAuth = (input: any) => {
