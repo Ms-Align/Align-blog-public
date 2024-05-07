@@ -2,13 +2,99 @@
 layout: Memorys
 title: Memorys
 memorys:
+  - date: "2024-05-07"
+    memory:
+      - title: 
+        time: "09:01:51"
+        avatar: /img/avatar.jpg
+        content: "二进宫，只是这次没有那么着急了。上次刚好是两个月前，好像我故意的一样"
+        weather: 多云
+        tem: 21℃
+        desc: 
+        owner: Align
+        music: 
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+          - /img/memorys/76f76f78b49af06f556ce6e91cdab2a1.jpeg
+  - date: "2024-05-06"
+    memory:
+      - title: 
+        time: "15:01:13"
+        avatar: /img/avatar.jpg
+        content: "节后慵懒的午后，今天午休貌似没有睡着，因为到点起来时身上没有那种来自骨髓深处的疲惫感，我的身心一团乱麻，我应该感到疲惫的。
+
+不知道从哪里开始说呢，不知道怎么整理，我不知道为什么我要经历这些。我只想做个正常人，如果一个人没有什么出彩的地方，也没有什么追求，能力，这样的人还能更普通吗，这样的人需要任何付出来成为吗?
+
+不需要，应该不需要吧，但是我不是，我还需要付出代价才能成为一个普通人。
+
+枷锁感。真的很讨厌，时隔多年又体会到这种感觉，这种枷锁来自哪里呢，我在初三时就写下了答案，来自家庭，来自社会。家庭的枷锁，社会的枷锁，为此我也不是没努力过吧，算是，十年来我以为我摆脱掉了，我快要忘了这种感觉，快要能成功忽视掉那些烦恼了，但是我注定是要失败的，因为问题没有解决，问题还在那里，事情不会自己变好，人生也是。
+
+我老是和别人说要改变，或者说在**里总有人要改变，不然一切都只是照旧，是延续，是悲哀的遗传，这何其痛苦，改变是何其痛苦，这就是牺牲，想要改变就是要有人来牺牲自己，来改变道路，来改变错误，来承受错误，独自承受之前从未有人牺牲承受的所有错误。
+
+但是要怎么做呢，不知道，你意识到了，你准备好了。可是你却不知道怎么点燃自己燃烧掉那些东西，你什么都做不了，"
+        weather: 晴
+        tem: 25℃
+        desc: 
+        owner: Align
+        music: 435a7a49801a4a47fd33925b878ccf7a.mpeg
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+
+  - date: "2024-05-03"
+    memory:
+      - title: 
+        time: "14:59:59"
+        avatar: /img/avatar.jpg
+        content: "怎么有人喝半斤就躺"
+        weather: 多云
+        tem: 22℃
+        desc: 
+        owner: Align
+        music: 
+        location:
+          - 江苏省
+          - 宿迁市
+          - 泗阳县
+        psd:
+
+        img:
+          - /img/memorys/f3c29010ecb024c083abd4da68cb59a6.jpeg
+          - /img/memorys/d1020992d2fd0d6390d70bce601f8558.jpeg
+  - date: "2024-05-02"
+    memory:
+      - title: 
+        time: "14:26:25"
+        avatar: /img/avatar.jpg
+        content: "这船吃水也太深了"
+        weather: 晴
+        tem: 24℃
+        desc: 
+        owner: Align
+        music: 
+        location:
+          - 江苏省
+          - 宿迁市
+          - 泗阳县
+        psd:
+
+        img:
+          - /img/memorys/d9595cc94a786b548148d7dc1fee99e4.jpeg
   - date: "2024-04-29"
     memory:
       - title: 
         time: "17:02:31"
         avatar: /img/avatar.jpg
         content: "任然 - 飞鸟和蝉
-
 
 
 你说青涩最搭初恋
@@ -291,7 +377,6 @@ ps.这是4号拍的了，一直没心情发出来"
         time: "09:29:55"
         avatar: /img/avatar.jpg
         content: "小幸运 - 田馥甄
-
 
 
 我听见雨滴落在青青草地
@@ -982,17 +1067,13 @@ Oh
         content: "今天到现在都没有聊天呢。
 
 
-
 虽然什么都没说，但是我其实还是想了很多，我想那样做，像个正常人一样做所有应该做，想要做的事情，我迫切的想要主动，可是我不知道是什么在阻拦我。
-
 
 
 见面了才是真正的开始呢，我想要去做，但是我害怕，害怕这会是终点。
 
 
-
 有时候感觉真的没有办法，我没有能力解决哪怕可以预见的，即将产生的误解，我知道那会发生……
-
 
 
 节日快乐。"
