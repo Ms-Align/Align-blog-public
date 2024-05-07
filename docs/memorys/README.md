@@ -98,7 +98,9 @@ memorys:
         tem: 22℃
         desc: 
         owner: Align
-        music: 0d19af0cb4f389981b4b82b7e7d8978b.mpeg
+        music:
+          - 飞鸟和禅.mpeg
+          - 0d19af0cb4f389981b4b82b7e7d8978b.mpeg
         location:
           - 江苏省
           - 南京市
@@ -399,7 +401,9 @@ Oh
         tem: 21℃
         desc: 
         owner: Align
-        music: dd3c073775af690769963151fad4907e.mpeg
+        music:
+          - 小幸运.mp3
+          - dd3c073775af690769963151fad4907e.mpeg
         location:
           - 江苏省
           - 南京市

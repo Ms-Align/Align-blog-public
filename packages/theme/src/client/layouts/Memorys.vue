@@ -55,7 +55,7 @@
             <div class="tags-wrapper">
                 <div class="link-section"
                     :style="{ 'padding-bottom': '16px', 'margin': isMobile() ? '0 -12px' : '0 24px', 'width': '100%' }">
-                    <h2>过滤条件</h2>
+                    <h2>筛选</h2>
                     <div style="margin-left: 16px;display:flex;align-items:center;flex-wrap: wrap">
                         <el-tag effect="dark" style="margin: 2px 8px;" round v-for="tag in dynamicTags" :key="tag.value"
                             closable :disable-transitions="false" @close="handleClose(tag)">
@@ -95,11 +95,13 @@
                                                     <v-icon name="gi-padlock-open"></v-icon>
                                                 </el-button>
                                                 <el-button @click="toggleMusic(memory?.music)" type="primary"
-                                                    :style="{ 'font-weight': 'bold', display: !memory?.music ? 'none' : undefined }"
+                                                    :style="{ 'font-weight': 'bold', display: !memory?.music?.length ? 'none' : undefined }"
                                                     link>
                                                     <v-icon name="si-youtubemusic"></v-icon>
                                                     <!-- <v-icon v-if="memory.music == audioRef.src"
-                                                        name="ri-pause-circle-fill"></v-icon> -->
+                                                        name="ri-pause-circle-fill"></v-icon> --><span
+                                                        style="font-size: 12px;font-weight: 400;">{{ memory?.music?.[0]
+                                                        }}</span>
                                                 </el-button>
                                             </div>
                                         </el-space>
@@ -232,14 +234,14 @@ const options = [
     },
     {
         value: 'MUSIC',
-        label: '音频',
+        label: '是否有音频',
         children: [
             {
-                value: 'MUSIC_true_有配乐',
-                label: '有配乐',
+                value: 'MUSIC_true_有音乐',
+                label: '有音乐',
             }, {
-                value: 'MUSIC_false_无配乐',
-                label: '无配乐',
+                value: 'MUSIC_false_无音乐',
+                label: '无音乐',
             },
         ],
     },
@@ -382,11 +384,11 @@ class FilterMemoryBy {
         let _source = JSON.parse(JSON.stringify(this.current?.result || this.current?.source || '[]')), _type = this.current?.type
         if (JSON.parse(_type)) {
             _source.forEach(item => {
-                item.memory = item?.memory?.filter(memory => memory?.music)
+                item.memory = item?.memory?.filter(memory => memory?.music?.length)
             })
         } else {
             _source.forEach(item => {
-                item.memory = item?.memory?.filter(memory => !memory?.music)
+                item.memory = item?.memory?.filter(memory => !memory?.music?.length)
             })
         }
         this.current.result = _source?.filter(item => item?.memory?.length)
@@ -449,9 +451,14 @@ const handleInputConfirm = (value) => {
 // }
 
 
-const toggleMusic = (src: string) => {
-    audioRef.value.src = '/audio/musics/' + src;
+const toggleMusic = (music: string[]) => {
+    audioRef.value.src = '/audio/musics/' + music?.[1] || music?.[0];
     (audioRef.value as any)?.play()
+    ElMessage({
+        message: '加载中，将会自动播放',
+        type: 'success',
+        plain: true,
+    })
 }
 const onAuth = (input: any) => {
     //输入值和密码相等时
