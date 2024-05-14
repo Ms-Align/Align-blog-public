@@ -2,6 +2,67 @@
 layout: Memorys
 title: Memorys
 memorys:
+  - date: "2024-05-12"
+    memory:
+      - title: 
+        time: "01:57:51"
+        avatar: /img/avatar.jpg
+        content: "I'm really in pain"
+        weather: 阴
+        tem: 17℃
+        desc: 
+        owner: Align
+        music: 
+
+        location:
+          - 江苏省
+          - 南京市
+          - 江宁区
+        psd:
+          - 1
+          - 我
+        img:
+
+  - date: "2024-05-11"
+    memory:
+      - title: 
+        time: "23:35:55"
+        avatar: /img/avatar.jpg
+        content: "或许我就是个不会融化的冰块"
+        weather: 阴
+        tem: 17℃
+        desc: 
+        owner: Align
+        music: 
+
+        location:
+          - 江苏省
+          - 南京市
+          - 江宁区
+        psd:
+
+        img:
+
+  - date: "2024-05-09"
+    memory:
+      - title: 
+        time: "10:51:15"
+        avatar: /img/avatar.jpg
+        content: "预告预告，抽空摸一篇"
+        weather: 多云
+        tem: 22℃
+        desc: 
+        owner: Align
+        music: 
+
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+          - /img/memorys/b273050a5016c02aac3eff752690b0fb.png
   - date: "2024-05-07"
     memory:
       - title: 
@@ -13,6 +74,7 @@ memorys:
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -41,7 +103,9 @@ memorys:
         tem: 25℃
         desc: 
         owner: Align
-        music: 435a7a49801a4a47fd33925b878ccf7a.mpeg
+        music: 
+          - 还是会想你.mp3
+          - 435a7a49801a4a47fd33925b878ccf7a.mpeg
         location:
           - 江苏省
           - 南京市
@@ -61,6 +125,7 @@ memorys:
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 宿迁市
@@ -81,6 +146,7 @@ memorys:
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 宿迁市
@@ -184,8 +250,8 @@ memorys:
         tem: 22℃
         desc: 
         owner: Align
-        music:
-          - 飞鸟和禅.mpeg
+        music: 
+          - 飞鸟和蝉.mp3
           - 0d19af0cb4f389981b4b82b7e7d8978b.mpeg
         location:
           - 江苏省
@@ -206,6 +272,7 @@ memorys:
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -227,6 +294,7 @@ i cant take it anymore, and i cant wait it anymore."
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -246,6 +314,7 @@ i cant take it anymore, and i cant wait it anymore."
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -263,6 +332,7 @@ i cant take it anymore, and i cant wait it anymore."
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -282,6 +352,7 @@ i cant take it anymore, and i cant wait it anymore."
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 常州市
@@ -302,6 +373,7 @@ i cant take it anymore, and i cant wait it anymore."
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 常州市
@@ -321,6 +393,7 @@ i cant take it anymore, and i cant wait it anymore."
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 常州市
@@ -343,6 +416,7 @@ i cant take it anymore, and i cant wait it anymore."
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -364,6 +438,7 @@ ps.这是4号拍的了，一直没心情发出来"
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -486,7 +561,7 @@ Oh
         tem: 21℃
         desc: 
         owner: Align
-        music:
+        music: 
           - 小幸运.mp3
           - dd3c073775af690769963151fad4907e.mpeg
         location:
@@ -508,6 +583,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -527,6 +603,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -545,6 +622,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -564,6 +642,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -583,6 +662,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -602,6 +682,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 宿迁市
@@ -622,6 +703,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 宿迁市
@@ -642,6 +724,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -663,6 +746,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -685,6 +769,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -706,6 +791,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -729,6 +815,7 @@ Oh
         desc: 
         owner: 梦亦同趋
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -745,6 +832,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -763,6 +851,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -779,6 +868,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -799,6 +889,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -816,6 +907,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -834,6 +926,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -852,6 +945,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 宿迁市
@@ -881,6 +975,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -900,6 +995,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -918,6 +1014,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -937,6 +1034,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -961,6 +1059,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 宿迁市
@@ -980,6 +1079,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 江苏省
           - 南京市
@@ -1000,6 +1100,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 南京市
           - 雨花台区
@@ -1018,6 +1119,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 南京市
           - 雨花台区
@@ -1038,6 +1140,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 南京市
           - 雨花台区
@@ -1055,6 +1158,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 南京市
           - 雨花台区
@@ -1086,6 +1190,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 南京市
           - 雨花台区
@@ -1105,6 +1210,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 南京市
           - 雨花台区
@@ -1121,6 +1227,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 南京市
           - 雨花台区
@@ -1139,6 +1246,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 南京市
           - 雨花台区
@@ -1155,6 +1263,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 南京市
           - 雨花台区
@@ -1173,6 +1282,7 @@ Oh
         desc: 
         owner: Align
         music: 
+
         location:
           - 北京市
           - 西城区
