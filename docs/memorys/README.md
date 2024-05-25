@@ -2,14 +2,120 @@
 layout: Memorys
 title: Memorys
 memorys:
-  - date: "2024-05-12"
+  - date: "2024-05-22"
     memory:
       - title: 
-        time: "01:57:51"
+        time: "14:21:48"
         avatar: /img/avatar.jpg
-        content: "I'm really in pain"
+        content: "薛之谦 - 刚刚好
+
+
+词：薛之谦
+
+
+曲：薛之谦
+
+
+如果有人在灯塔
+
+拨弄她的头发
+
+思念刻在墙和瓦
+
+如果感情会挣扎
+
+没有说的儒雅
+
+把挽回的手放不下
+
+镜子里的人说假话
+
+违心的样子你接受了吗
+
+装聋或者作哑 要不我先说话
+
+我们的爱情 到这刚刚好
+
+剩不多也不少 还能忘掉
+
+我应该可以 把自己照顾好
+
+我们的距离 到这刚刚好
+
+不够我们拥抱 就挽回不了
+
+用力爱过的人 不该计较
+
+是否要逼人弃了甲
+
+亮出一条伤疤
+
+不堪的根源在哪
+
+可是感情会挣扎
+
+没有别的办法
+
+它劝你不如退下
+
+如果分手太复杂
+
+流浪的歌手会放下吉他
+
+故事要美必须藏着真话
+
+我们的爱情 到这刚刚好
+
+剩不多也不少 还能忘掉
+
+我应该可以 把自己照顾好
+
+我们的距离 到这刚刚好
+
+不够我们拥抱 就挽回不了
+
+用力爱过的人 何必计较
+
+我们的爱情到这刚刚好
+
+再不争也不吵 不必再煎熬
+
+你可以不用 记得我的好
+
+我们的爱情到这刚刚好
+
+趁我们还没到 天涯海角
+
+我也不是非要去那座城堡
+
+天空有些暗了暗的刚刚好
+
+我难过的样子就没人看到
+
+你别太在意我身上的记号"
         weather: 阴
-        tem: 17℃
+        tem: 27℃
+        desc: 
+        owner: Align
+        music: 
+          - 刚刚好.mp3
+          - 001d404e88c9f57ef68e7665af4edd7c.mpeg
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+
+  - date: "2024-05-15"
+    memory:
+      - title: 
+        time: "09:50:52"
+        avatar: /img/avatar.jpg
+        content: "你说感情是能培养的。如今成了我心里永远无法排解的痛苦。"
+        weather: 多云
+        tem: 22℃
         desc: 
         owner: Align
         music: 
@@ -17,12 +123,29 @@ memorys:
         location:
           - 江苏省
           - 南京市
-          - 江宁区
         psd:
-          - 1
-          - 我
+          - 111111111
+          - 22222222222
         img:
 
+      - title: 
+        time: "09:34:39"
+        avatar: /img/avatar.jpg
+        content: "外国的牛喝着味道真是怪"
+        weather: 多云
+        tem: 22℃
+        desc: 
+        owner: Align
+        music: 
+
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+          - /img/memorys/2f049e362df58fceec46bcd3db5d8a7d.jpeg
   - date: "2024-05-11"
     memory:
       - title: 
