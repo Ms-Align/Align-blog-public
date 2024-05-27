@@ -30,8 +30,8 @@ export default defineUserConfig({
       },
     ],
     ["link", { rel: "manifest", href: "/manifest.webmanifest" }],
-    ["script", { charset: "UTF-8", src: "/sensorsdata.min.js" }],
-    ["script", { charset: "UTF-8", src: "/sensorInit.js" }],
+    // ["script", { charset: "UTF-8", src: "/sensorsdata.min.js" }],
+    // ["script", { charset: "UTF-8", src: "/sensorInit.js" }],
     ["meta", { name: "application-name", content: "Gungnir Theme" }],
     ["meta", { name: "apple-mobile-web-app-title", content: "Gungnir Theme" }],
     [
