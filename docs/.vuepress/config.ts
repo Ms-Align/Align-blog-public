@@ -216,7 +216,6 @@ export default defineUserConfig({
     footer: `
       &copy; <a href="https://github.com/Ms-Align" target="_blank">Align</a> 2024-2025
       <br>
-	sensors.quick('autoTrack');
 </script>
       Powered by <a href="https://v2.vuepress.vuejs.org" target="_blank">VuePress</a>
     `,
