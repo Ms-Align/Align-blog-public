@@ -2,6 +2,65 @@
 layout: Memorys
 title: Memorys
 memorys:
+  - date: "2024-06-02"
+    memory:
+      - title: 
+        time: "23:30:32"
+        avatar: /img/avatar.jpg
+        content: "舍不得删，也永远没有勇气再去看，害怕会丢掉，去备份，想好好的保存好。"
+        weather: 阴
+        tem: 22℃
+        desc: 
+        owner: Align
+        music: 
+
+        location:
+          - 江苏省
+          - 南京市
+          - 江宁区
+        psd:
+
+        img:
+
+      - title: 
+        time: "14:10:37"
+        avatar: /img/avatar.jpg
+        content: " "
+        weather: 多云
+        tem: 26℃
+        desc: 
+        owner: Align
+        music: 
+
+        location:
+          - 江苏省
+          - 南京市
+        psd:
+
+        img:
+          - /img/memorys/b3415ff145708df86be74cba12b3badf.jpeg
+          - /img/memorys/d4a61395dbb3461c28c2b074be1c6b7b.jpeg
+          - /img/memorys/0f042d02e8b349030a0d17ec97738856.jpeg
+  - date: "2024-05-27"
+    memory:
+      - title: 
+        time: "17:09:33"
+        avatar: /img/avatar.jpg
+        content: "不再去幻想结果是否会有所不同也是一种痛苦"
+        weather: 阴
+        tem: 18℃
+        desc: 
+        owner: Align
+        music: 
+
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+
   - date: "2024-05-22"
     memory:
       - title: 
@@ -124,8 +183,7 @@ memorys:
           - 江苏省
           - 南京市
         psd:
-          - 111111111
-          - 22222222222
+
         img:
 
       - title: 
@@ -567,7 +625,8 @@ ps.这是4号拍的了，一直没心情发出来"
           - 南京市
           - 雨花台区
         psd:
-
+          - 245
+          - 56757
         img:
           - /img/memorys/1a70e25cc4b07161316d9a506d815e63.jpeg
           - /img/memorys/cf8a561495cced501055e6be77de6ca7.jpeg
