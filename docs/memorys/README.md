@@ -2,6 +2,547 @@
 layout: Memorys
 title: Memorys
 memorys:
+  - date: "2024-07-04"
+    memory:
+      - title: 
+        time: "16:43:56"
+        avatar: /img/avatar.jpg
+        content: "董小姐还是那么漂亮"
+        weather: 晴
+        tem: 34℃
+        desc: 
+        owner: Align
+        music: 
+
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+          - about her
+          - 王董
+        img:
+          - /img/memorys/286b4e42addcd93193c381184501ba01.jpeg
+          - /img/memorys/594a3f86ecc69a2cd1c1ecdc2b905ccf.jpeg
+  - date: "2024-07-01"
+    memory:
+      - title: 
+        time: "14:40:29"
+        avatar: /img/avatar.jpg
+        content: "  盯着你发呆的时候，我从来没想过自己有一天能遇到你，一个似乎不该在我生命中出现的人。
+
+我知道有些事情终究是不可能的，那怕我多么希望生命中的那个人是你，多到遗憾不知道需要时间冲刷多久。
+
+所以为什么呢，亲爱的，我们还没有分开，我们还是能触及到对方，我们感受到对方的点点滴滴。
+
+所以，我，我还是会（为此）等待。等待你，等待那个注定不是你的人。
+
+但是我知道这就是我们之间最好的结局，尽管我难以接受，尽管那些美好的记忆都是和你在一起，尽管理智告诉我去接受是不理智的。
+
+亲爱的如果这就是最好的结局，那我为什么会为此痛苦，我从没想到我会如此痛苦，就是那么难受，对不起，仅仅是因为感受不到你的回应。
+
+所以为什么呢，亲爱的，我们还是能触及到彼此，所以我也要
+
+
+I never knew
+
+
+When the clock stopped and I'm looking at you
+
+
+I never thought I'll miss someone like you
+
+
+Someone I thought that I knew
+
+
+I never knew
+
+
+I should have known something wouldn't be true
+
+
+Baby you know that I'm so into you
+
+
+More than I know I should do
+
+
+So why why why
+
+
+Why should we wait there
+
+
+And I I I
+
+
+I should be waiting
+
+
+Waiting for someone new
+
+
+Even though that it wasn't you
+
+
+But I know that it's
+
+
+Wonderful
+
+
+Incredible
+
+
+Baby irrational
+
+
+I never knew it was obsessional
+
+
+And I never knew it was with you oooh
+
+
+Baby if it's just
+
+
+Wonderful
+
+
+Incredible
+
+
+Baby irrational
+
+
+I never knew it was so sad
+
+
+Just so sad
+
+
+I'm so sorry
+
+
+Even now I just cannot feel you feel me
+
+
+Hmmm
+
+
+Hmmm
+
+
+So why why why
+
+
+Why should we wait there
+
+
+And I I I
+
+
+I should be waiting
+
+
+Waiting for someone new
+
+
+Even though that it wasn't you
+
+
+But I know that it's
+
+
+Wonderful
+
+
+Incredible
+
+
+Baby irrational
+
+
+I never knew it was obsessional
+
+
+And I never knew it was with you oooh
+
+
+Baby if it's just
+
+
+Wonderful
+
+
+Incredible
+
+
+Baby irrational
+
+
+I never knew it was so sad
+
+
+Just so sad
+
+
+I'm so sorry
+
+
+Even now I just cannot feel you fall
+
+
+I don't even know now
+
+
+I'm sure you'll wait for me
+
+
+Even now I just cannot deny
+
+
+I just hold on so tight
+
+
+Until you and I never could breathe
+
+
+Oh
+
+
+Wonderful
+
+
+Incredible
+
+
+Baby irrational
+
+
+I never knew it was obsessional
+
+
+And I never knew it was with you until you tell me to
+
+
+Baby if it's just
+
+
+Wonderful
+
+
+Incredible
+
+
+Baby irrational
+
+
+I never knew it was so sad
+
+
+Just so sad
+
+
+I'm so sorry
+
+
+Even now I just cannot feel you feel me"
+        weather: 阴
+        tem: 29℃
+        desc: 
+        owner: Align
+        music: 
+          - wonderful u.mp3
+          - 2aa9ea8f1946225db373660b341b5846.mpeg
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+          - 1
+          - 3
+        img:
+
+  - date: "2024-06-30"
+    memory:
+      - title: 
+        time: "02:03:52"
+        avatar: /img/avatar.jpg
+        content: "下个大暴雨也要给酒吧贡献绩效来了"
+        weather: 阴
+        tem: 25℃
+        desc: 
+        owner: Align
+        music: 
+
+        location:
+          - 江苏省
+          - 南京市
+          - 江宁区
+        psd:
+
+        img:
+          - /img/memorys/63b8047ce2edff6c7d6aa8d2d3320c70.jpeg
+          - /img/memorys/29c9af0a83aa1d9b239068d6fb402280.jpeg
+          - /img/memorys/dead4aa4afb7e10a2ed830940a55e8f8.jpeg
+  - date: "2024-06-28"
+    memory:
+      - title: 
+        time: "12:18:13"
+        avatar: /img/avatar.jpg
+        content: "靠的越近，我们之间的距离越遥远
+
+越是看的清楚，我就越是什么都不懂"
+        weather: 阴
+        tem: 24℃
+        desc: 
+        owner: Align
+        music: 
+
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+
+  - date: "2024-06-22"
+    memory:
+      - title: 
+        time: "02:20:34"
+        avatar: /img/avatar.jpg
+        content: "喝多了是这样，用骰子杯接酒"
+        weather: 
+        tem: 
+        desc: 
+        owner: Align
+        music: 
+
+        location:
+          - null
+          - null
+        psd:
+
+        img:
+          - /img/memorys/1c3c7b376e90bc88d6236a6a7b449c42.jpeg
+  - date: "2024-06-21"
+    memory:
+      - title: 
+        time: "13:49:57"
+        avatar: /img/avatar.jpg
+        content: "很响的雷，很大的雨。"
+        weather: 大雨
+        tem: 28℃
+        desc: 
+        owner: Align
+        music: 
+
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+
+      - title: 
+        time: "09:14:39"
+        avatar: /img/avatar.jpg
+        content: "爱的多的人总是先掉眼泪"
+        weather: 阴
+        tem: 27℃
+        desc: 
+        owner: Align
+        music: 
+          - 谁.mp3
+          - 9c4895c601ce09a614735d54a7fcdc5b.mpeg
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+
+  - date: "2024-06-18"
+    memory:
+      - title: 
+        time: "18:22:43"
+        avatar: /img/avatar.jpg
+        content: "6块啊！饮料刺客！六块啊！"
+        weather: 阴
+        tem: 28℃
+        desc: 
+        owner: Align
+        music: 
+
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+          - /img/memorys/e3c673f4edba91015ebb5fa010ce2852.jpeg
+  - date: "2024-06-17"
+    memory:
+      - title: 
+        time: "21:11:18"
+        avatar: /img/avatar.jpg
+        content: "人一生中真正会爱过的歌并不多"
+        weather: 晴
+        tem: 27℃
+        desc: 
+        owner: Align
+        music: 
+          - 我好想你.mp3
+          - 8879299b16d9e0378373eaeba6991e6d.mpeg
+        location:
+          - 江苏省
+          - 南京市
+          - 江宁区
+        psd:
+
+        img:
+
+  - date: "2024-06-16"
+    memory:
+      - title: 
+        time: "02:19:48"
+        avatar: /img/avatar.jpg
+        content: "去月球
+
+很早就听说过这款游戏，b站也有很多人做视频，提到最多的关键词就是感人，落泪。
+
+今天静下心来看了遍通关视频，它能让人落泪吗，我想是的，就在我眼眶湿润的时候。
+
+我想遗憾是最能打动人的，因为每个人都会有遗憾，每个人都会有不曾实现的约定，每个人都会存在未能传达的情感。
+
+会后悔吗？会忘记吗？会后悔，但是永远无法忘记。但是去月球的故事告诉我是会被忘记的，哪怕那个人等待了一年又一年"
+        weather: 
+        tem: 
+        desc: 
+        owner: Align
+        music: 
+
+        location:
+          - 江苏省
+          - 南京市
+        psd:
+
+        img:
+          - /img/memorys/1eaf2235d9274b92b5dba42c90a7e03b.jpeg
+          - /img/memorys/6d76dfd860e68f066257170d65dd0e01.jpeg
+  - date: "2024-06-13"
+    memory:
+      - title: 
+        time: "13:22:59"
+        avatar: /img/avatar.jpg
+        content: "董小姐...
+
+我真的好希望那个人是你。
+
+"
+        weather: 多云
+        tem: 33℃
+        desc: 
+        owner: Align
+        music: 
+
+        location:
+          - 江苏省
+          - 南京市
+        psd:
+
+        img:
+
+  - date: "2024-06-11"
+    memory:
+      - title: 
+        time: "15:05:23"
+        avatar: /img/avatar.jpg
+        content: "Life, it seems, is more about suffering."
+        weather: 阴
+        tem: 27℃
+        desc: 
+        owner: Align
+        music: 
+
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+
+  - date: "2024-06-09"
+    memory:
+      - title: 
+        time: "22:58:20"
+        avatar: /img/avatar.jpg
+        content: "水天一色"
+        weather: 阴
+        tem: 26℃
+        desc: 
+        owner: Align
+        music: 
+
+        location:
+          - 江苏省
+          - 苏州市
+          - 吴中区
+        psd:
+
+        img:
+          - /img/memorys/e8be77cd02fb6547996d528b9713d063.jpeg
+          - /img/memorys/af48ce0517b3ba4fc907d74e8122380d.jpeg
+          - /img/memorys/49b171c2ef0c3b298df8d7221520c08a.jpeg
+          - /img/memorys/de08309368cd5d91fa0277f720e59bf9.jpeg
+  - date: "2024-06-05"
+    memory:
+      - title: 
+        time: "16:42:06"
+        avatar: /img/avatar.jpg
+        content: "上海下了一天的雨"
+        weather: 小雨
+        tem: 24℃
+        desc: 
+        owner: Align
+        music: 
+
+        location:
+          - 上海市
+          - 市辖区
+          - 徐汇区
+        psd:
+
+        img:
+
+  - date: "2024-06-04"
+    memory:
+      - title: 
+        time: "14:04:02"
+        avatar: /img/avatar.jpg
+        content: "我从没有见过极光出现的村落"
+        weather: 多云
+        tem: 28℃
+        desc: 
+        owner: Align
+        music: 
+          - 漠河舞厅.mp3
+          - a2c7b1d3b22d4208a9c81abd0a6a3ed8.mpeg
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+
   - date: "2024-06-02"
     memory:
       - title: 
@@ -745,7 +1286,7 @@ Oh
         owner: Align
         music: 
           - 小幸运.mp3
-          - dd3c073775af690769963151fad4907e.mpeg
+          - 2fb69f499270bef113092239703ab606.mpeg
         location:
           - 江苏省
           - 南京市
