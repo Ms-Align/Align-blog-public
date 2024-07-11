@@ -2,6 +2,93 @@
 layout: Memorys
 title: Memorys
 memorys:
+  - date: "2024-07-11"
+    memory:
+      - title: 
+        time: "09:36:52"
+        avatar: /img/avatar.jpg
+        content: "南京这鬼天气，你下雨干嘛不顺便下点洗衣粉让我把裤子和鞋洗了。还有为什么下水道口跟喷泉一样啊"
+        weather: 大雨
+        tem: 20℃
+        desc: 
+        owner: Align
+        music: 
+
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+
+  - date: "2024-07-10"
+    memory:
+      - title: 
+        time: "10:25:46"
+        avatar: /img/avatar.jpg
+        content: "点点雨滴敲打着心，沿着思念渐渐透明"
+        weather: 暴雨
+        tem: 26℃
+        desc: 
+        owner: Align
+        music: 
+          - 雨季.mp3
+          - d982a172031b5235df3d347859da1a60.mpeg
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+
+  - date: "2024-07-08"
+    memory:
+      - title: 
+        time: "11:07:05"
+        avatar: /img/avatar.jpg
+        content: "服务器到期了做数据迁移，结果新数据库忘了开身份验证了，一天就被黑了，要我三万块啊！还好有备份。"
+        weather: 多云
+        tem: 36℃
+        desc: 
+        owner: Align
+        music: 
+
+        location:
+          - 江苏省
+          - 南京市
+          - 雨花台区
+        psd:
+
+        img:
+
+  - date: "2024-07-05"
+    memory:
+      - title: 
+        time: "23:46:20"
+        avatar: /img/avatar.jpg
+        content: "亲爱的 what is wrong
+
+告诉我 who you love
+
+亲爱的 what is wrong
+
+告诉我 who you love"
+        weather: 多云
+        tem: 33℃
+        desc: 
+        owner: Align
+        music: 
+
+        location:
+          - 江苏省
+          - 南京市
+          - 江宁区
+        psd:
+
+        img:
+
   - date: "2024-07-04"
     memory:
       - title: 
